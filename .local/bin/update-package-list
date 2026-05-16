@@ -1,0 +1,41 @@
+#! /usr/bin/env bash
+
+#  ░█▀▄░█▀▀░█▀▀░█░░░█▀▀░█▀▀░▀█▀░█▀█░█▀▄░░░█░█░█▀█░█▀▄░█▀█░▀█▀░█▀▀
+#  ░█▀▄░█▀▀░█▀▀░█░░░█▀▀░█░░░░█░░█░█░█▀▄░░░█░█░█▀▀░█░█░█▀█░░█░░█▀▀
+#  ░▀░▀░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░░░▀▀▀░▀░░░▀▀░░▀░▀░░▀░░▀▀▀
+
+
+: '
+Refresh Arch Linux pacman mirrorlist using Reflector
+----------------------------------------------------
+
+    --country: Restrict mirrors to selected countries. Prefer mirrors from nearby regions for lower latency and better download speeds.
+
+    --protocol: Use only HTTPS mirrors.
+
+    --latest: Limit the list to the n most recently synchronized servers.
+
+    --age: Only return mirrors that have synchronized in the last n hours. n may be an integer or a decimal number.
+
+    --sort: Sort the mirrorlist.
+                "age": last server synchronization;
+                "rate": download rate;
+                "country": country name, either alphabetically or in the order given by the --country option;
+                "score": MirrorStatus score;
+                "delay": MirrorStatus delay.
+
+    --save: Save the mirrorlist to pacman mirrorlist and overwrite it.
+'
+sudo reflector --country India,Singapore,Japan --protocol https --latest 20 --age 12 --sort score --save /etc/pacman.d/mirrorlist
+
+: '
+Refresh package databases and upgrade the system
+------------------------------------------------
+
+    -S: Synchronize/ install packages.
+
+    -yy: Force refresh all package databases.
+
+    -u: Upgrade all installed packages to latest versions.
+'
+sudo pacman -Syyu
