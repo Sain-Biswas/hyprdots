@@ -1,0 +1,16 @@
+[general]
+import = ["~/hyprdots/.config/alacritty/themes/matugen.toml"]
+live_config_reload = true
+
+[window]
+padding = { x = 10, y = 10 }
+decorations = "None"
+opacity = 0.70
+decorations_theme_variant = "Dark"
+
+[font]
+size = 14
+normal = { family = "JetBrainsMono Nerd Font Propo" }
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }

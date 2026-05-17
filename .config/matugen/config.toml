@@ -33,3 +33,9 @@ output_path = "~/hyprdots/.config/zed/themes/matugen.json"
 [templates.ghostty]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-ghostty"
 output_path = "~/hyprdots/.config/ghostty/themes/Matugen"
+
+
+# Alacritty
+[templates.alacritty]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-alacritty.toml"
+output_path = "~/hyprdots/.config/alacritty/themes/matugen.toml"
