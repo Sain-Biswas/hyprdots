@@ -39,3 +39,9 @@ output_path = "~/hyprdots/.config/ghostty/themes/Matugen"
 [templates.alacritty]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-alacritty.toml"
 output_path = "~/hyprdots/.config/alacritty/themes/matugen.toml"
+
+
+# Starship
+[templates.starship]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-starship.toml"
+output_path = "~/hyprdots/.config/starship.toml"

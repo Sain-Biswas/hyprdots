@@ -1,0 +1,298 @@
+# ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█░░░▀█▀░█▀█░█▄█░█░░
+# ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀░░░░█░░█░█░█░█░█░░
+# ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░░▀░░▀░░▀▀▀░▀░▀░▀▀▀
+
+"$schema" = 'https://starship.rs/config-schema.json'
+scan_timeout = 100
+command_timeout = 500
+follow_symlinks = false
+
+format = """
+$os\
+$directory\
+${custom.giturl}\
+$git_branch\
+${custom.git_worktree}\
+$git_status\
+$git_metrics\
+$fill\
+$git_state\
+$package\
+$bun\
+$deno\
+$rust\
+$golang\
+$lua\
+$c\
+$cpp\
+$gleam\
+$docker_context\
+$sudo\
+$cmd_duration\
+$line_break\
+$username\
+$character\
+"""
+
+palette = "matugen"
+continuation_prompt = "[▸▹ ](primary)"
+
+[fill]
+symbol = ' '
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█░░░█▀▀░█▀▀░▀█▀
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█░░░█▀▀░█▀▀░░█░
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀▀░▀▀▀░▀░░░░▀░
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "tertiaryfixeddim bold"
+
+[os.symbols]
+Windows = "󰍲"
+Macos = " "
+Linux = "󰌽"
+Android = "󰀲"
+Arch = ""
+
+[directory]
+disabled = false
+style = "surfacetint bold"
+format = "[ $path ]($style)"
+truncation_length = 4
+
+[directory.substitutions]
+'/mnt/shared' = '@shared'
+
+[custom.giturl]
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL="󰊢 "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = "git rev-parse --is-inside-work-tree 2> /dev/null"
+format = "on $output"
+require_repo = true
+ignore_timeout = true
+
+[git_branch]
+disabled = false
+symbol = "[](onprimary) "
+style = "fg:primary bg:onprimary"
+format =  "  at [$symbol$branch]($style)[](onprimary)"
+
+[custom.git_worktree]
+description = "Show indicator when inside a git worktree"
+command = """
+if git rev-parse --git-dir >/dev/null 2>&1; then
+      common_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
+      git_dir=$(git rev-parse --path-format=absolute --git-dir 2>/dev/null)
+      if [ "$common_dir" != "$git_dir" ]; then
+            echo "󰾋 "
+      fi
+fi
+"""
+when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+format = " ([$output ]($style))"
+style = "bold tertiary"
+require_repo = true
+ignore_timeout = true
+
+[git_status]
+disabled = false
+format = " [$untracked$staged$modified$renamed$conflicted$ahead_behind]($style)"
+# options available for format
+staged     = " [+${count}](bold primary)"
+modified   = " [!${count}](bold secondary)"
+renamed    = " [»${count}](bold tertiary)"
+deleted    = " [-${count}](bold error)"
+untracked  = " [?${count}](bold secondary)"
+stashed    = " [≡${count}](bold errorcontainer)"
+conflicted = " [✘${count}](bold error bold)"
+
+ahead      = " [⇡${count}](bold primary)"
+behind     = " [⇣${count}](bold secondary)"
+diverged   = " [⇕⇡${ahead_count}⇣${behind_count}](bold error)"
+
+
+[git_metrics]
+disabled = false
+added_style = 'bold primary'
+deleted_style = "bold error"
+format = ' [+$added]($added_style) [-$deleted]($deleted_style)'
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█▀▄░▀█▀░█▀▀░█░█░▀█▀
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█▀▄░░█░░█░█░█▀█░░█░
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░
+
+[git_state]
+disabled = false
+format = ' [](onsecondary)[$state]($style)[](onsecondary)'
+style = "fg:secondary bg:onsecondary"
+
+[sudo]
+disabled = false
+style = 'bold fg:error bg:onerror'
+format = " [](onerror)[sudo]($style)[](onerror)"
+
+[cmd_duration]
+disabled = false
+min_time = 500
+format = ' [󰔚 $duration](bold tertiary)'
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█▀▄░█▀█░▀█▀░▀█▀░█▀█░█▄█
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█▀▄░█░█░░█░░░█░░█░█░█░█
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀░░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀
+
+[character]
+disabled = false
+success_symbol = "[](bold fg:primary)"
+error_symbol = "[✘ ](bold fg:error)"
+vimcmd_symbol = "[ ](bold fg:secondary)"
+
+[username]
+disabled = false
+style_user = 'secondaryfixeddim bold'
+style_root = 'errorcontainer bold'
+format = '[$user]($style) '
+show_always = true
+
+[line_break]
+disabled = false
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█░░░█▀█░█▀█░█▀▀░█░█░█▀█░█▀▀░█▀▀░█▀▀
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█░░░█▀█░█░█░█░█░█░█░█▀█░█░█░█▀▀░▀▀█
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀▀░▀░▀░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
+
+[package]
+disabled = false
+format = ' [](ontertiaryfixed)[$symbol$version]($style)[](ontertiaryfixed)'
+style = "fg:tertiaryfixed bold bg:ontertiaryfixed"
+symbol = "󰏓 "
+
+[bun]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = " "
+
+[deno]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = " "
+
+[rust]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = "󱘗 "
+
+[golang]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version($mod_version)]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = "󰟓 "
+
+[lua]
+disabled = false
+format = ' [](ontertiaryfixed)[$symbol$version]($style)[](ontertiaryfixed)'
+style = "fg:tertiaryfixed bold bg:ontertiaryfixed"
+symbol = "󰢱 "
+
+[c]
+disabled = false
+format = ' [](ontertiarycontainer)[$symbol$name-$version]($style)[](ontertiarycontainer)'
+style = "fg:tertiarycontainer bold bg:ontertiarycontainer"
+symbol = " "
+
+[cpp]
+disabled = false
+format = ' [](onsecondarycontainer)[$symbol$name-$version]($style)[](onsecondarycontainer)'
+style = "fg:secondarycontainer bold bg:onsecondarycontainer"
+symbol = " "
+
+[gleam]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = " "
+
+[docker_context]
+disabled = false
+format = ' [](onsecondaryfixed)[$symbol$context]($style)[](onsecondaryfixed)'
+style = "fg:secondaryfixed bold bg:onsecondaryfixed"
+symbol = "󰡨 "
+
+
+
+
+# ░█▄█░█▀█░▀█▀░█░█░█▀▀░█▀▀░█▀█░░░░░░░░░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
+# ░█░█░█▀█░░█░░█░█░█░█░█▀▀░█░█░░░▄▄▄░░░█░░░█░█░█░░░█░█░█▀▄░▀▀█
+# ░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░░░░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
+
+[palettes.matugen]
+primary = "#fbba65"
+onprimary = "#462a00"
+primarycontainer = "#643f00"
+onprimarycontainer = "#ffddb6"
+inverseprimary = "#845401"
+primaryfixed = "#ffddb6"
+primaryfixeddim = "#fbba65"
+onprimaryfixed = "#2a1800"
+onprimaryfixedvariant = "#643f00"
+
+secondary = "#c2c4eb"
+onsecondary = "#2b2e4d"
+secondarycontainer = "#414465"
+onsecondarycontainer = "#e0e0ff"
+secondaryfixed = "#e0e0ff"
+secondaryfixeddim = "#c2c4eb"
+onsecondaryfixed = "#161937"
+onsecondaryfixedvariant = "#414465"
+
+tertiary = "#8dd2db"
+ontertiary = "#00363b"
+tertiarycontainer = "#004f56"
+ontertiarycontainer = "#a8eef7"
+tertiaryfixed = "#a8eef7"
+tertiaryfixeddim = "#8dd2db"
+ontertiaryfixed = "#001f23"
+ontertiaryfixedvariant = "#004f56"
+
+error = "#ffb4ab"
+onerror = "#690005"
+errorcontainer = "#93000a"
+onerrorcontainer = "#ffdad6"
+
+surfacetint = "#fbba65"
+surface = "#0c1516"
+onsurface = "#dae4e5"
+onsurfacevariant = "#b8cacc"
+outline = "#839496"
+outlinevariant = "#394a4c"
+sourcecolor = "#0c4744"

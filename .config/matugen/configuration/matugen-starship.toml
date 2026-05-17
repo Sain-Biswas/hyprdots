@@ -1,0 +1,298 @@
+# ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█░░░▀█▀░█▀█░█▄█░█░░
+# ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀░░░░█░░█░█░█░█░█░░
+# ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░░▀░░▀░░▀▀▀░▀░▀░▀▀▀
+
+"$schema" = 'https://starship.rs/config-schema.json'
+scan_timeout = 100
+command_timeout = 500
+follow_symlinks = false
+
+format = """
+$os\
+$directory\
+${custom.giturl}\
+$git_branch\
+${custom.git_worktree}\
+$git_status\
+$git_metrics\
+$fill\
+$git_state\
+$package\
+$bun\
+$deno\
+$rust\
+$golang\
+$lua\
+$c\
+$cpp\
+$gleam\
+$docker_context\
+$sudo\
+$cmd_duration\
+$line_break\
+$username\
+$character\
+"""
+
+palette = "matugen"
+continuation_prompt = "[▸▹ ](primary)"
+
+[fill]
+symbol = ' '
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█░░░█▀▀░█▀▀░▀█▀
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█░░░█▀▀░█▀▀░░█░
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀▀░▀▀▀░▀░░░░▀░
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "tertiaryfixeddim bold"
+
+[os.symbols]
+Windows = "󰍲"
+Macos = " "
+Linux = "󰌽"
+Android = "󰀲"
+Arch = ""
+
+[directory]
+disabled = false
+style = "surfacetint bold"
+format = "[ $path ]($style)"
+truncation_length = 4
+
+[directory.substitutions]
+'/mnt/shared' = '@shared'
+
+[custom.giturl]
+description = "Display symbol for remote Git server"
+command = """
+GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
+if [[ "$GIT_REMOTE" =~ "github" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
+    GIT_REMOTE_SYMBOL=" "
+elif [[ "$GIT_REMOTE" =~ "git" ]]; then
+    GIT_REMOTE_SYMBOL="󰊢 "
+else
+    GIT_REMOTE_SYMBOL=" "
+fi
+echo "$GIT_REMOTE_SYMBOL "
+"""
+when = "git rev-parse --is-inside-work-tree 2> /dev/null"
+format = "on $output"
+require_repo = true
+ignore_timeout = true
+
+[git_branch]
+disabled = false
+symbol = "[](onprimary) "
+style = "fg:primary bg:onprimary"
+format =  "  at [$symbol$branch]($style)[](onprimary)"
+
+[custom.git_worktree]
+description = "Show indicator when inside a git worktree"
+command = """
+if git rev-parse --git-dir >/dev/null 2>&1; then
+      common_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
+      git_dir=$(git rev-parse --path-format=absolute --git-dir 2>/dev/null)
+      if [ "$common_dir" != "$git_dir" ]; then
+            echo "󰾋 "
+      fi
+fi
+"""
+when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+format = " ([$output ]($style))"
+style = "bold tertiary"
+require_repo = true
+ignore_timeout = true
+
+[git_status]
+disabled = false
+format = " [$untracked$staged$modified$renamed$conflicted$ahead_behind]($style)"
+# options available for format
+staged     = " [+${count}](bold primary)"
+modified   = " [!${count}](bold secondary)"
+renamed    = " [»${count}](bold tertiary)"
+deleted    = " [-${count}](bold error)"
+untracked  = " [?${count}](bold secondary)"
+stashed    = " [≡${count}](bold errorcontainer)"
+conflicted = " [✘${count}](bold error bold)"
+
+ahead      = " [⇡${count}](bold primary)"
+behind     = " [⇣${count}](bold secondary)"
+diverged   = " [⇕⇡${ahead_count}⇣${behind_count}](bold error)"
+
+
+[git_metrics]
+disabled = false
+added_style = 'bold primary'
+deleted_style = "bold error"
+format = ' [+$added]($added_style) [-$deleted]($deleted_style)'
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█▀▄░▀█▀░█▀▀░█░█░▀█▀
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█▀▄░░█░░█░█░█▀█░░█░
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░
+
+[git_state]
+disabled = false
+format = ' [](onsecondary)[$state]($style)[](onsecondary)'
+style = "fg:secondary bg:onsecondary"
+
+[sudo]
+disabled = false
+style = 'bold fg:error bg:onerror'
+format = " [](onerror)[sudo]($style)[](onerror)"
+
+[cmd_duration]
+disabled = false
+min_time = 500
+format = ' [󰔚 $duration](bold tertiary)'
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█▀▄░█▀█░▀█▀░▀█▀░█▀█░█▄█
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█▀▄░█░█░░█░░░█░░█░█░█░█
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀░░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀
+
+[character]
+disabled = false
+success_symbol = "[](bold fg:primary)"
+error_symbol = "[✘ ](bold fg:error)"
+vimcmd_symbol = "[ ](bold fg:secondary)"
+
+[username]
+disabled = false
+style_user = 'secondaryfixeddim bold'
+style_root = 'errorcontainer bold'
+format = '[$user]($style) '
+show_always = true
+
+[line_break]
+disabled = false
+
+
+
+
+# ░█▄█░█▀█░█▀▄░█░█░█░░░█▀▀░█▀▀░░░░░░░░░█░░░█▀█░█▀█░█▀▀░█░█░█▀█░█▀▀░█▀▀░█▀▀
+# ░█░█░█░█░█░█░█░█░█░░░█▀▀░▀▀█░░░▄▄▄░░░█░░░█▀█░█░█░█░█░█░█░█▀█░█░█░█▀▀░▀▀█
+# ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀▀░▀░▀░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
+
+[package]
+disabled = false
+format = ' [](ontertiaryfixed)[$symbol$version]($style)[](ontertiaryfixed)'
+style = "fg:tertiaryfixed bold bg:ontertiaryfixed"
+symbol = "󰏓 "
+
+[bun]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = " "
+
+[deno]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = " "
+
+[rust]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = "󱘗 "
+
+[golang]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version($mod_version)]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = "󰟓 "
+
+[lua]
+disabled = false
+format = ' [](ontertiaryfixed)[$symbol$version]($style)[](ontertiaryfixed)'
+style = "fg:tertiaryfixed bold bg:ontertiaryfixed"
+symbol = "󰢱 "
+
+[c]
+disabled = false
+format = ' [](ontertiarycontainer)[$symbol$name-$version]($style)[](ontertiarycontainer)'
+style = "fg:tertiarycontainer bold bg:ontertiarycontainer"
+symbol = " "
+
+[cpp]
+disabled = false
+format = ' [](onsecondarycontainer)[$symbol$name-$version]($style)[](onsecondarycontainer)'
+style = "fg:secondarycontainer bold bg:onsecondarycontainer"
+symbol = " "
+
+[gleam]
+disabled = false
+format = ' [](onprimaryfixed)[$symbol$version]($style)[](onprimaryfixed)'
+style = "fg:primaryfixed bold bg:onprimaryfixed"
+symbol = " "
+
+[docker_context]
+disabled = false
+format = ' [](onsecondaryfixed)[$symbol$context]($style)[](onsecondaryfixed)'
+style = "fg:secondaryfixed bold bg:onsecondaryfixed"
+symbol = "󰡨 "
+
+
+
+
+# ░█▄█░█▀█░▀█▀░█░█░█▀▀░█▀▀░█▀█░░░░░░░░░█▀▀░█▀█░█░░░█▀█░█▀▄░█▀▀
+# ░█░█░█▀█░░█░░█░█░█░█░█▀▀░█░█░░░▄▄▄░░░█░░░█░█░█░░░█░█░█▀▄░▀▀█
+# ░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░░░░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀
+
+[palettes.matugen]
+primary = "{{ colors.primary.default.hex }}"
+onprimary = "{{ colors.on_primary.default.hex }}"
+primarycontainer = "{{ colors.primary_container.default.hex }}"
+onprimarycontainer = "{{ colors.on_primary_container.default.hex }}"
+inverseprimary = "{{ colors.inverse_primary.default.hex }}"
+primaryfixed = "{{ colors.primary_fixed.default.hex }}"
+primaryfixeddim = "{{ colors.primary_fixed_dim.default.hex }}"
+onprimaryfixed = "{{ colors.on_primary_fixed.default.hex }}"
+onprimaryfixedvariant = "{{ colors.on_primary_fixed_variant.default.hex }}"
+
+secondary = "{{ colors.secondary.default.hex }}"
+onsecondary = "{{ colors.on_secondary.default.hex }}"
+secondarycontainer = "{{ colors.secondary_container.default.hex }}"
+onsecondarycontainer = "{{ colors.on_secondary_container.default.hex }}"
+secondaryfixed = "{{ colors.secondary_fixed.default.hex }}"
+secondaryfixeddim = "{{ colors.secondary_fixed_dim.default.hex }}"
+onsecondaryfixed = "{{ colors.on_secondary_fixed.default.hex }}"
+onsecondaryfixedvariant = "{{ colors.on_secondary_fixed_variant.default.hex }}"
+
+tertiary = "{{ colors.tertiary.default.hex }}"
+ontertiary = "{{ colors.on_tertiary.default.hex }}"
+tertiarycontainer = "{{ colors.tertiary_container.default.hex }}"
+ontertiarycontainer = "{{ colors.on_tertiary_container.default.hex }}"
+tertiaryfixed = "{{ colors.tertiary_fixed.default.hex }}"
+tertiaryfixeddim = "{{ colors.tertiary_fixed_dim.default.hex }}"
+ontertiaryfixed = "{{ colors.on_tertiary_fixed.default.hex }}"
+ontertiaryfixedvariant = "{{ colors.on_tertiary_fixed_variant.default.hex }}"
+
+error = "{{ colors.error.default.hex }}"
+onerror = "{{ colors.on_error.default.hex }}"
+errorcontainer = "{{ colors.error_container.default.hex }}"
+onerrorcontainer = "{{ colors.on_error_container.default.hex }}"
+
+surfacetint = "{{ colors.surface_tint.default.hex }}"
+surface = "{{ colors.surface.default.hex }}"
+onsurface = "{{ colors.on_surface.default.hex }}"
+onsurfacevariant = "{{ colors.on_surface_variant.default.hex }}"
+outline = "{{ colors.outline.default.hex }}"
+outlinevariant = "{{ colors.outline_variant.default.hex }}"
+sourcecolor = "{{ colors.source_color.default.hex }}"
