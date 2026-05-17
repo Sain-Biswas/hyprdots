@@ -4,6 +4,9 @@
 set = true
 command = "awww img {{image}} --transition-type outer"
 
+
+
+
 # GTK Applicatoin Theming
 [templates.gtk3]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-gtk3.css"
@@ -18,3 +21,9 @@ output_path = "~/hyprdots/.config/gtk-4.0/gtk.css"
 [templates.hypr]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-hypr.lua"
 output_path = "~/hyprdots/.config/hypr/common/colors.lua"
+
+
+# Zed Editor
+[templates.zed]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-zed.json"
+output_path = "~/hyprdots/.config/zed/themes/matugen.json"
