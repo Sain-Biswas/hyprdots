@@ -27,3 +27,9 @@ output_path = "~/hyprdots/.config/hypr/common/colors.lua"
 [templates.zed]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-zed.json"
 output_path = "~/hyprdots/.config/zed/themes/matugen.json"
+
+
+# Ghostty
+[templates.ghostty]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-ghostty"
+output_path = "~/hyprdots/.config/ghostty/themes/Matugen"

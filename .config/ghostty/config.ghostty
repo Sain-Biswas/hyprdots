@@ -1,0 +1,14 @@
+font-family = JetBrains Nerd Font Propo
+font-size = 14
+
+window-padding-x = 0
+window-padding-y = 0
+window-decoration = none
+window-theme = dark
+
+background-opacity = 0.8
+
+cursor-style = bar
+cursor-style-blink = true
+
+theme = Matugen
