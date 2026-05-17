@@ -12,3 +12,9 @@ output_path = "~/hyprdots/.config/gtk-3.0/gtk.css"
 [templates.gtk4]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-gtk4.css"
 output_path = "~/hyprdots/.config/gtk-4.0/gtk.css"
+
+
+# Hyprland
+[templates.hypr]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-hypr.lua"
+output_path = "~/hyprdots/.config/hypr/common/colors.lua"
