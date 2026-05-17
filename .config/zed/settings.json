@@ -7,12 +7,45 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Catppuccin Mocha",
+  "disable_ai": true,
+
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all",
+    "show_close_button": "always",
+  },
+
+  "project_panel": {
+    "sticky_scroll": false,
+    "auto_fold_dirs": false,
+    "diagnostic_badges": true,
+    "bold_folder_labels": true,
+    "git_status_indicator": true,
+  },
+
   "ui_font_size": 16,
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+
   "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+
+  "autosave": "on_focus_change",
+  "show_whitespaces": "all",
+
   "theme": {
     "mode": "dark",
     "light": "Matugen Light Transparent",
     "dark": "Matugen Dark Transparent",
+  },
+
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
+  },
+
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font Mono",
   },
 }
