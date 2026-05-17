@@ -45,3 +45,9 @@ output_path = "~/hyprdots/.config/alacritty/themes/matugen.toml"
 [templates.starship]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-starship.toml"
 output_path = "~/hyprdots/.config/starship.toml"
+
+
+# Btop
+[templates.btop]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-btop.theme"
+output_path = "~/hyprdots/.config/btop/themes/matugen.theme"
