@@ -1,0 +1,14 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "awww img {{image}} --transition-type outer"
+
+# GTK Applicatoin Theming
+[templates.gtk3]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-gtk3.css"
+output_path = "~/hyprdots/.config/gtk-3.0/gtk.css"
+
+[templates.gtk4]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-gtk4.css"
+output_path = "~/hyprdots/.config/gtk-4.0/gtk.css"
