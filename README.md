@@ -7,7 +7,7 @@ Modern Hyprland + UWSM dotfiles for Arch Linux with a clean Wayland workflow.
  - “Modular Hyprland setup with UWSM integration.”
 
  ```bash
-git clone --recurse-submodules https://github.com/YOUR_USERNAME/hyprdots.git
+git clone --recurse-submodules https://github.com/Sain-Biswas/hyprdots.git
  ```
 
 OR
