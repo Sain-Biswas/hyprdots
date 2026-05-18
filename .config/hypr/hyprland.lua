@@ -331,7 +331,8 @@ hl.device({
 
 --  Refer to https://wiki.hypr.land/Configuring/Basics/Binds/
 
-local mainMod = "SUPER" --  Sets "Windows" key as the main modifier key
+local mainMod = "SUPER"                            --  Sets "Windows" key as the main modifier key
+local scripts = "~/hyprdots/.config/hypr/scripts/" --  Scripts directory
 
 
 --  Application Launching KeyBindings
@@ -346,9 +347,9 @@ hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("uwsm app -- google-chrome-stab
 
 
 --  System KeyBindings
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("rofi -show drun -show-icons")) --  Open Rofi Application Menu
--- hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd(utility .. "/utility-rofi emoji"))                                  --  Open Rofi Emoji Selector
--- hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(utility .. "/utility-rofi window"))                                    --  Open Rofi menu for opened application window
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh app"))        --  Open Rofi Application Menu
+hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh emoji")) --  Open Rofi Emoji Selector
+hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh window"))   --  Open Rofi menu for opened application window
 
 -- hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd(utility .. "/utility-power-menu"))                               --  Open Rofi Power menu
 -- hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(utility .. "/utility-clipboard"))                                        --  Open Cliphist Clipboard manager using Rofi

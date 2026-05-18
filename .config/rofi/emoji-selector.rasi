@@ -1,0 +1,75 @@
+@import "~/hyprdots/.config/rofi/colors.rasi"
+
+
+window {
+    background-color: @surface;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+mainbox {
+    background-color: @surface;
+    text-color: @on-surface;
+    border-radius: 4px;
+    orientation: vertical;
+    padding: 8px;
+    children: ["inputbar", "listview"];
+}
+
+inputbar {
+    background-color: transparent;
+    children: ["entry"];
+}
+
+entry {
+    placeholder: "Search emoji by keywords...";
+    text-color: @tertiary;
+    padding: 8px 0px 8px 8px;
+    background-color: transparent;
+}
+
+listview {
+    spacing: 4px;
+    lines: 5;
+    columns: 8;
+    scrollbar: true;
+    scrollbar-width: 4px;
+    background-color: transparent;
+}
+
+element {
+    padding: 10px;
+    background-color: transparent;
+    text-color: @on-surface;
+    border-radius: 4px;
+    children: ["element-text"];
+}
+
+element normal.active {
+    background-color: @surface;
+    text-color: @on-surface;
+}
+
+element selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    font: "JetBrainsMono Nerd Font 24";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+scrollbar {
+    background-color: transparent;
+    handle-color: @tertiary;
+    padding: 0;
+}
+
+scrollbar-handle {
+    border-radius: 4px;
+    width: 4px;
+}

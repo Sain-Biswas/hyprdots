@@ -51,3 +51,9 @@ output_path = "~/hyprdots/.config/starship.toml"
 [templates.btop]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-btop.theme"
 output_path = "~/hyprdots/.config/btop/themes/matugen.theme"
+
+
+# Rofi
+[templates.rofi]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-rofi.rasi"
+output_path = "~/hyprdots/.config/rofi/colors.rasi"
