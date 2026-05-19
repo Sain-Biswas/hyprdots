@@ -57,3 +57,15 @@ output_path = "~/hyprdots/.config/btop/themes/matugen.theme"
 [templates.rofi]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-rofi.rasi"
 output_path = "~/hyprdots/.config/rofi/colors.rasi"
+
+
+# Waybar
+[templates.waybar]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-colors.css"
+output_path = "~/hyprdots/.config/waybar/colors.css"
+
+
+# Sway NC
+[templates.swaync]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-colors.css"
+output_path = "~/hyprdots/.config/swaync/colors.css"
