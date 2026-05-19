@@ -10,7 +10,7 @@ decorations_theme_variant = "Dark"
 
 [font]
 size = 14
-normal = { family = "JetBrainsMono Nerd Font Propo" }
+normal = { family = "Maple Mono NF" }
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
