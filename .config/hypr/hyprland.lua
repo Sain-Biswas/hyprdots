@@ -365,7 +365,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))                        
 
 
 --  Misc.
--- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(utility .. "/utility-refresh-theme")) --  Refresh currently applied color scheme
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(scripts .. "refresh-theme.sh")) --  Refresh currently applied color scheme
 
 
 -- Move focus with mainMod + arrow keys
