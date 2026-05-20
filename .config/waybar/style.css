@@ -1,0 +1,41 @@
+/**
+* ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+@import "colors.css";
+
+* {
+    all: unset;
+
+    font-family: "JetBrainsMono Nerd Font Propo";
+}
+
+window#waybar {
+    border-radius: 0px;
+
+    background: @surface;
+    color: @on_surface;
+}
+
+tooltip {
+    border-radius: 10px;
+    background: @surface;
+}
+
+tooltip label {
+    color: @on_surface;
+}
+
+@import "styling/backlight.css";
+@import "styling/battery.css";
+@import "styling/clock.css";
+@import "styling/custom-sway-nc.css";
+@import "styling/mpris.css";
+@import "styling/power-profiles-daemon.css";
+@import "styling/pulseaudio.css";
+@import "styling/tray.css";
+@import "styling/workspaces.css";
+@import "styling/idle-inhibitor.css";
+@import "styling/network.css";

@@ -1,0 +1,53 @@
+/**
+* ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█░█░█▀█░█▀▄░█░█░█▀▀░█▀█░█▀█░█▀▀░█▀▀░█▀▀░░░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▄█░█░█░█▀▄░█▀▄░▀▀█░█▀▀░█▀█░█░░░█▀▀░▀▀█░░░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+#workspaces {
+    min-width: 100px;
+    font-size: 0.2rem;
+    padding: 10px 6px;
+    margin: 0px 0;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    background: @surface;
+}
+
+#workspaces button {
+    color: transparent;
+    padding: 0px 4px;
+    border-radius: 99px;
+    margin: 0px 2px;
+    min-width: 4px;
+
+    background: @on_surface;
+}
+
+#workspaces button.active {
+    min-width: 1.2rem;
+    transition: none;
+
+    background: @primary;
+}
+
+#workspaces button:not(.active):not(.empty):not(.urgent) {
+    background: @secondary;
+}
+
+#workspaces button.empty:not(.active):not(.urgent) {
+    opacity: 0.3;
+}
+
+#workspaces button.urgent {
+    min-width: 1rem;
+    transition: none;
+
+    background: @error;
+}
+
+#workspaces button.special {
+    background: @error_container;
+}

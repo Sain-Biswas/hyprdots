@@ -1,0 +1,32 @@
+/**
+ * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▄█░█▀█░█▀▄░▀█▀░█▀▀
+ * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░█░█▀▀░█▀▄░░█░░▀▀█
+ * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀
+ */
+
+{
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "{status_icon} <i>{title}</i>",
+
+    "tooltip-format": "Source -> {player_icon}  {player}\nTitle -> {title}\nArtist -> {artist}\nAlbum -> {album}\nLength -> {position}/{length}\nStatus -> {status_icon}  {status}",
+
+    "player-icons": {
+      "default": "󰎆",
+      "mpv": "",
+      "firefox": "",
+      "youtube": "",
+      "vivaldi": "",
+      "spotify": "󰓇",
+    },
+
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "Stopped": "",
+    },
+
+    "title-len": 60,
+    "interval": 1,
+  },
+}

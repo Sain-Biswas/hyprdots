@@ -1,0 +1,52 @@
+/**
+* ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░█░█░█▀█░█░█░░░█▀█░█▀▀░░░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░▀▀█░█▄█░█▀█░░█░░░░█░█░█░░░░░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░▀░▀░▀░▀░░▀░░░░▀░▀░▀▀▀░░░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+#custom-swaync {
+    padding: 0px 8px;
+    border-radius: 10px;
+    margin: 2px 8px;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    background: @surface;
+    color: @on_surface;
+}
+
+#custom-swaync.notification {
+    background: @error;
+    color: @on_error;
+}
+
+#custom-swaync.dnd-none {
+    background: @primary;
+    color: @on_primary;
+}
+
+#custom-swaync.dnd-notification {
+    background: linear-gradient(to bottom right, @primary, @error);
+    color: @on_primary;
+}
+
+#custom-swaync.inhibited-none {
+    background: @secondary;
+    color: @on_secondary;
+}
+
+#custom-swaync.inhibited-notification {
+    background: linear-gradient(to bottom right, @secondary, @error);
+    color: @on_secondary;
+}
+
+#custom-swaync.dnd-inhibited-none {
+    background: @tertiary;
+    color: @on_tertiary;
+}
+
+#custom-swaync.dnd-inhibited-notification {
+    background: linear-gradient(to bottom right, @tertiary, @error);
+    color: @on_tertiary;
+}

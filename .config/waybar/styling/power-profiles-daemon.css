@@ -1,0 +1,32 @@
+/**
+* ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀█░█▀█░█░█░█▀▀░█▀▄░░░█▀█░█▀▄░█▀█░█▀▀░▀█▀░█░░░█▀▀░█▀▀░░░█▀▄░█▀█░█▀▀░█▄█░█▀█░█▀█░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▀▀░█░█░█▄█░█▀▀░█▀▄░░░█▀▀░█▀▄░█░█░█▀▀░░█░░█░░░█▀▀░▀▀█░░░█░█░█▀█░█▀▀░█░█░█░█░█░█░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░░░▀▀▀░▀░▀░▀▀▀░▀░▀░░░▀░░░▀░▀░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░░░▀▀░░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░▀░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+#power-profiles-daemon {
+    margin: 2px 8px;
+    padding: 0px 8px;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    background: @tertiary;
+    color: @on_tertiary;
+}
+
+#power-profiles-daemon.performance {
+    background: @error;
+    color: @on_error;
+}
+
+#power-profiles-daemon.balanced {
+    background: @surface;
+    color: @on_surface;
+}
+
+#power-profiles-daemon.power-saver {
+    background: @primary;
+    color: @on_primary;
+}

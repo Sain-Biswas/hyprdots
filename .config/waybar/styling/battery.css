@@ -1,0 +1,66 @@
+/**
+* ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▄░█▀█░▀█▀░▀█▀░█▀▀░█▀▄░█░█░░░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▀▄░█▀█░░█░░░█░░█▀▀░█▀▄░░█░░░░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀░░▀░▀░░▀░░░▀░░▀▀▀░▀░▀░░▀░░░░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+#battery {
+    margin: 2px;
+    padding: 0px 8px;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    background: @surface;
+    color: @on_surface;
+}
+
+#battery.full {
+    background: @on_tertiary;
+    color: @tertiary;
+}
+
+#battery.charging,
+#battery.plugged {
+    background: @primary;
+    color: @on_primary;
+}
+
+/*
+* Blinking animation for WARNING and CRITICAL states
+*/
+
+@keyframes blink-warning {
+    to {
+        background: @secondary_container;
+        color: @on_secondary_container;
+    }
+}
+
+@keyframes blink-critical {
+    to {
+        background: @error_container;
+        color: @on_error_container;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: @secondary;
+    color: @on_secondary;
+    animation-name: blink-warning;
+}
+
+#battery.critical:not(.charging) {
+    background: @error;
+    color: @on_error;
+    animation-name: blink-critical;
+}
+
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) {
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

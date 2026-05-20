@@ -1,0 +1,33 @@
+/**
+* ░█▄█░█▀█░▀█▀░█░█░█▀▀░█▀▀░█▀█░░░░░░░░░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄
+* ░█░█░█▀█░░█░░█░█░█░█░█▀▀░█░█░░░▄▄▄░░░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄
+* ░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░░░░░░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀
+*/
+
+@define-color surface_blur rgba(12, 21, 22, 0.75);
+@define-color surface rgba(12, 21, 22, 1);
+@define-color on_surface rgba(218, 228, 229, 1);
+
+@define-color primary rgba(251, 186, 101, 1);
+@define-color on_primary rgba(70, 42, 0, 1);
+
+@define-color primary_container rgba(100, 63, 0, 1);
+@define-color on_primary_container rgba(255, 221, 182, 1);
+
+@define-color secondary rgba(194, 196, 235, 1);
+@define-color on_secondary rgba(43, 46, 77, 1);
+
+@define-color secondary_container rgba(65, 68, 101, 1);
+@define-color on_secondary_container rgba(224, 224, 255, 1);
+
+@define-color tertiary rgba(141, 210, 219, 1);
+@define-color on_tertiary rgba(0, 54, 59, 1);
+
+@define-color tertiary_container rgba(0, 79, 86, 1);
+@define-color on_tertiary_container rgba(168, 238, 247, 1);
+
+@define-color error rgba(255, 180, 171, 1);
+@define-color on_error rgba(105, 0, 5, 1);
+
+@define-color error_container rgba(147, 0, 10, 1);
+@define-color on_error_container rgba(255, 218, 214, 1);

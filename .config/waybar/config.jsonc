@@ -1,0 +1,36 @@
+/**
+ * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀
+ * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░░░█░█░█░█░█▀▀░░█░░█░█
+ * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀
+ */
+
+{
+  "position": "top",
+  "height": 0,
+  "spacing": 0,
+
+  "include": [
+    "~/hyprdots/.config/waybar/modules/clock.jsonc",
+    "~/hyprdots/.config/waybar/modules/workspaces.jsonc",
+    "~/hyprdots/.config/waybar/modules/tray.jsonc",
+    "~/hyprdots/.config/waybar/modules/power-profiles-daemon.jsonc",
+    "~/hyprdots/.config/waybar/modules/backlight.jsonc",
+    "~/hyprdots/.config/waybar/modules/pulseaudio.jsonc",
+    "~/hyprdots/.config/waybar/modules/battery.jsonc",
+    "~/hyprdots/.config/waybar/modules/custom-sway-nc.jsonc",
+    "~/hyprdots/.config/waybar/modules/mpris.jsonc",
+    "~/hyprdots/.config/waybar/modules/idle-inhibitor.jsonc",
+    "~/hyprdots/.config/waybar/modules/network.jsonc",
+  ],
+
+  "modules-left": ["hyprland/workspaces", "mpris"],
+  "modules-center": ["power-profiles-daemon", "clock", "custom/swaync"],
+  "modules-right": [
+    "idle_inhibitor",
+    "pulseaudio",
+    "network",
+    "backlight",
+    "tray",
+    "battery",
+  ],
+}

@@ -1,0 +1,37 @@
+/**
+ * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░█░░░█▀█░█▀▀░█░█░░░░░░░░░█▄█░█▀█░▀█▀░█░█░█▀▀░█▀▀░█▀█
+ * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░░░█░░░█░█░█░░░█▀▄░░░▄█▄░░░█░█░█▀█░░█░░█░█░█░█░█▀▀░█░█
+ * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░▀░░░░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀
+ */
+
+{
+  "clock": {
+    "interval": 30,
+
+    "format": " {:%I:%M %p}",
+    "format-alt": " {:%A, %B %Od %Y}",
+
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 4,
+      "weeks-pos": "left",
+
+      "format": {
+        "months": "<span color='#fbba65'><b>{}</b></span>",
+        "days": "<span color='#dae4e5'><b>{}</b></span>",
+        "weeks": "<span color='#c2c4eb'><b>W{}</b></span>",
+        "weekdays": "<span color='#8dd2db'><b>{}</b></span>",
+        "today": "<span color='#ffb4ab'><b><u>{}</u></b></span>",
+      },
+    },
+
+    "actions": {
+      "on-click-middle": "shift_reset",
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+}

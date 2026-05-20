@@ -1,0 +1,38 @@
+/**
+ * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░█░█░█▀█░█░█░░░█▀█░█▀▀
+ * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░▀▀█░█▄█░█▀█░░█░░░░█░█░█░░
+ * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░▀░▀░▀░▀░░▀░░░░▀░▀░▀▀▀
+ */
+
+{
+  "custom/swaync": {
+    "tooltip": true,
+    "tooltip-format": "Left Click -> Launch Notification Center\nRight Click -> Do not Disturb",
+
+    "format": "{icon} {text}",
+
+    "format-icons": {
+      "none": "",
+      "notification": "",
+
+      "dnd-none": "",
+      "dnd-notification": "",
+
+      "inhibited-none": "",
+      "inhibited-notification": "󱏨",
+
+      "dnd-inhibited-none": "",
+      "dnd-inhibited-notification": "󱏪",
+    },
+
+    "return-type": "json",
+
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+
+    "escape": true,
+  },
+}

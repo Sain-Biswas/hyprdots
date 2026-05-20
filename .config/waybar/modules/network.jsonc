@@ -1,0 +1,36 @@
+/**
+ * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀█░█▀▀░▀█▀░█░█░█▀█░█▀▄░█░█
+ * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░█░█▀▀░░█░░█▄█░█░█░█▀▄░█▀▄
+ * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░▀░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░▀░▀
+ */
+
+{
+  "network": {
+    "format": "{ifname}",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+
+    "format-wifi": "{icon}",
+    "tooltip-format-wifi": "Interface : {ifname} \nSSID : {essid} \nSignal strength: {signaldBm}dBm {signalStrength}% \nFrequency : {frequency}GHz \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6} \n",
+
+    "format-ethernet": "󰈀  {bandwidthUpBits}  {bandwidthDownBits}",
+    "tooltip-format-ethernet": "Interface : {ifname} \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6}",
+
+    "format-linked": "   {bandwidthUpBits}  {bandwidthDownBits}",
+    "tooltip-format-linked": "Interface : {ifname} \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6}",
+
+    "format-disabled": "󰲛",
+    "tooltip-format-disabled": "Disabled",
+
+    "format-disconnected": "󰯡",
+    "tooltip-format-disconnected": "Disconnected",
+
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+
+    "family": "ipv4_6",
+    "interval": 1,
+
+    "format-alt": " {bandwidthUpBits}  {bandwidthDownBits}",
+
+    "on-click-right": "alacritty -e nmtui",
+  },
+}
