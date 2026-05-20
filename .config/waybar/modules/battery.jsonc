@@ -6,43 +6,36 @@
 
 {
   "battery": {
-    "bat": "BAT0",
-    "interval": 30,
+    "bat": "BAT0", //  The battery to monitor, as in /sys/class/power_supply/ instead of auto detect.
+    "interval": 30, //  The polling interval (in seconds) for the battery status.
 
+    //  A number of battery states which get activated on certain capacity levels.
     "states": {
-      "warning": 30,
-      "critical": 15,
+      "warning": 30, //  Add state 'warning' at 30% battery.
+      "critical": 15, //  Add state 'critical' at 15% battery.
     },
 
-    "format": "{icon} {capacity}%",
-    "format-full": "󱟢 {capacity}%",
-    "format-plugged": "󰚥 {capacity}%",
-    "format-charging": "{icon} {capacity}%",
+    "format": "{icon} {capacity}%", //  The format, how the information should be displayed. When the device is discharing.
+    "format-full": "󱟢 {capacity}%", //  The format, how the information should be displayed. When the battery is full.
+    "format-plugged": "󰚥 {capacity}%", //  The format, how the information should be displayed. When the device is plugged to power.
+    "format-charging": "{icon} {capacity}%", //  The format, how the information should be displayed. When the device is charing.
 
-    "tooltip-format": "Capacity     : {capacity}\nHealth       : {health}%\nCycles       : {cycles}",
+    "tooltip-format": "Capacity     : {capacity}\nHealth       : {health}%\nCycles       : {cycles}", //  The tooltip format. Showed on hover over module.
 
+    //  Based on the current capacity, the corresponding icon gets selected. The order is low to high. Or by the state if it is an object.
     "format-icons": {
-      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], //  Icons when device is discharing.
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"], //  Icons when device is charging.
     },
   },
 
   "upower": {
-    /*
-     * #upower
-     * #upower.charging
-     * #upower.discharging
-     * #upower.full
-     * #upower.empty
-     * #upower.unknown-status
-     */
+    "icon-size": 25, //  Defines the size of the icons. Set 0 for auto size.
+    "hide-if-empty": true, //  Defines visibility of the module if no devices can be found.
 
-    "icon-size": 25,
-    "hide-if-empty": true,
+    "format": "{percentage}", //  The text format.
 
-    "format": "{percentage}",
-
-    "tooltip": true,
-    "tooltip-spacing": 20,
+    "tooltip": true, //  Option to disable tooltip on hover.
+    "tooltip-spacing": 20, //  Defines the spacing between the tooltip device name and device battery status.
   },
 }

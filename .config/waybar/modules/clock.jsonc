@@ -6,32 +6,32 @@
 
 {
   "clock": {
-    "interval": 30,
+    "interval": 30, //  The interval in which the information gets polled.
 
-    "format": " {:%I:%M %p}",
-    "format-alt": " {:%A, %B %Od %Y}",
+    "format": " {:%I:%M %p}", //  The format, how the date and time should be displayed; see format options here. Split braces like {0:%H}text{0:%M}.
+    "format-alt": " {:%A, %B %Od %Y}", //Toggle to this alternative format on click, if specified.
 
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>", //  Tooltip on hover. Can also show a list of clocks in other timezones. See below the example using the property tz_list.
 
     "calendar": {
-      "mode": "month",
-      "mode-mon-col": 4,
-      "weeks-pos": "left",
+      "mode": "month", //  Calendar view mode. Possible values: year|month
+      "mode-mon-col": 4, //  Relevant for mode=year. Count of months per row
+      "weeks-pos": "left", //  The position where week numbers should be displayed. Disabled when is empty. Possible values: left|right
 
       "format": {
-        "months": "<span color='#fbba65'><b>{}</b></span>",
-        "days": "<span color='#dae4e5'><b>{}</b></span>",
-        "weeks": "<span color='#c2c4eb'><b>W{}</b></span>",
-        "weekdays": "<span color='#8dd2db'><b>{}</b></span>",
-        "today": "<span color='#ffb4ab'><b><u>{}</u></b></span>",
+        "months": "<span color='#fbba65'><b>{}</b></span>", //  Format is applied to months header(January, February,...etc.)
+        "days": "<span color='#dae4e5'><b>{}</b></span>", //  Format is applied to days
+        "weeks": "<span color='#c2c4eb'><b>W{}</b></span>", //  Format is applied to week numbers. When weekday format is not provided then is used default format: '{:%W}' when week starts with Monday, '{:%U}' otherwise
+        "weekdays": "<span color='#8dd2db'><b>{}</b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
+        "today": "<span color='#ffb4ab'><b><u>{}</u></b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
       },
     },
 
     "actions": {
-      "on-click-middle": "shift_reset",
-      "on-click-right": "mode",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down",
+      "on-click-middle": "shift_reset", //  Switch to current calendar month/year
+      "on-click-right": "mode", //  Switch calendar mode between year/month
+      "on-scroll-up": "shift_up", //  Switch to the next calendar month/year
+      "on-scroll-down": "shift_down", //  Switch to the previous calendar month/year
     },
   },
 }

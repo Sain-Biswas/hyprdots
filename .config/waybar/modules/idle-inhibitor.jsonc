@@ -6,14 +6,15 @@
 
 {
   "idle_inhibitor": {
-    "format": "{icon}",
+    "format": "{icon}", //  The format, how the state should be displayed.
 
+    //  Based on the current state, the corresponding icon gets selected.
     "format-icons": {
       "activated": "",
       "deactivated": "",
     },
 
-    "tooltip-format-activated": "Activated",
-    "tooltip-format-deactivated": "Deactivated",
+    "tooltip-format-activated": "Activated", // This format is used when the inhibit is activated.
+    "tooltip-format-deactivated": "Deactivated", //  This format is used when the inhibit is deactivated.
   },
 }
