@@ -1,0 +1,33 @@
+/**
+* ░█▄█░█▀█░▀█▀░█░█░█▀▀░█▀▀░█▀█░░░░░░░░░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄
+* ░█░█░█▀█░░█░░█░█░█░█░█▀▀░█░█░░░▄▄▄░░░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄
+* ░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░░░░░░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀
+*/
+
+@define-color surface_blur {{ colors.surface.default.rgba | set_alpha: 0.75 }};
+@define-color surface {{ colors.surface.default.rgba }};
+@define-color on_surface {{ colors.on_surface.default.rgba }};
+
+@define-color primary {{ colors.primary.default.rgba }};
+@define-color on_primary {{ colors.on_primary.default.rgba }};
+
+@define-color primary_container {{ colors.primary_container.default.rgba }};
+@define-color on_primary_container {{ colors.on_primary_container.default.rgba }};
+
+@define-color secondary {{ colors.secondary.default.rgba }};
+@define-color on_secondary {{ colors.on_secondary.default.rgba }};
+
+@define-color secondary_container {{ colors.secondary_container.default.rgba }};
+@define-color on_secondary_container {{ colors.on_secondary_container.default.rgba }};
+
+@define-color tertiary {{ colors.tertiary.default.rgba }};
+@define-color on_tertiary {{ colors.on_tertiary.default.rgba }};
+
+@define-color tertiary_container {{ colors.tertiary_container.default.rgba }};
+@define-color on_tertiary_container {{ colors.on_tertiary_container.default.rgba }};
+
+@define-color error {{ colors.error.default.rgba }};
+@define-color on_error {{ colors.on_error.default.rgba }};
+
+@define-color error_container {{ colors.error_container.default.rgba }};
+@define-color on_error_container {{ colors.on_error_container.default.rgba }};

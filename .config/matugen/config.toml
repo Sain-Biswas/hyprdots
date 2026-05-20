@@ -60,12 +60,18 @@ output_path = "~/hyprdots/.config/rofi/colors.rasi"
 
 
 # Waybar
+[templates.waybar-clock]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-waybar-clock.jsonc"
+output_path = "~/hyprdots/.config/waybar/modules/clock.jsonc"
+
 [templates.waybar]
-input_path = "~/hyprdots/.config/matugen/configuration/matugen-colors.css"
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-waybar.css"
 output_path = "~/hyprdots/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR2 waybar"
 
 
 # Sway NC
 [templates.swaync]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-colors.css"
 output_path = "~/hyprdots/.config/swaync/colors.css"
+post_hook = "swaync-client -R -rs"
