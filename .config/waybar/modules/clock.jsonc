@@ -2,8 +2,6 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░█░░░█▀█░█▀▀░█░█░░░░░░░░░█▄█░█▀█░▀█▀░█░█░█▀▀░█▀▀░█▀█
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░░░█░░░█░█░█░░░█▀▄░░░▄█▄░░░█░█░█▀█░░█░░█░█░█░█░█▀▀░█░█
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░▀░░░░▀░▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀
-
- * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Clock
  */
 
 {
@@ -21,10 +19,10 @@
       "weeks-pos": "left", //  The position where week numbers should be displayed. Disabled when is empty. Possible values: left|right
 
       "format": {
-        "months": "<span color='#fbba65'><b>{}</b></span>", //  Format is applied to months header(January, February,...etc.)
-        "days": "<span color='#dae4e5'><b>{}</b></span>", //  Format is applied to days
-        "weeks": "<span color='#c2c4eb'><b>W{}</b></span>", //  Format is applied to week numbers. When weekday format is not provided then is used default format: '{:%W}' when week starts with Monday, '{:%U}' otherwise
-        "weekdays": "<span color='#8dd2db'><b>{}</b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
+        "months": "<span color='#a4c9ff'><b>{}</b></span>", //  Format is applied to months header(January, February,...etc.)
+        "days": "<span color='#f5ddd8'><b>{}</b></span>", //  Format is applied to days
+        "weeks": "<span color='#edbd92'><b>W{}</b></span>", //  Format is applied to week numbers. When weekday format is not provided then is used default format: '{:%W}' when week starts with Monday, '{:%U}' otherwise
+        "weekdays": "<span color='#aed197'><b>{}</b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
         "today": "<span color='#ffb4ab'><b><u>{}</u></b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
       },
     },

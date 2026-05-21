@@ -1,107 +1,107 @@
 local colors = {}
 
-colors.image = "/home/sainbiswas/hyprdots/wallpapers/pokemon-may-waterfall.png"
+colors.image = "/home/sainbiswas/hyprdots/wallpapers/pokemon-gyrados.png"
 
 
-colors.background =  "rgba(0C1516FF)"
+colors.background =  "rgba(1C110EFF)"
 
 colors.error =  "rgba(FFB4ABFF)"
 
 colors.errorContainer =  "rgba(93000AFF)"
 
-colors.inverseOnSurface =  "rgba(293233FF)"
+colors.inverseOnSurface =  "rgba(3B2D2AFF)"
 
-colors.inversePrimary =  "rgba(845401FF)"
+colors.inversePrimary =  "rgba(336096FF)"
 
-colors.inverseSurface =  "rgba(DAE4E5FF)"
+colors.inverseSurface =  "rgba(F5DDD8FF)"
 
-colors.onBackground =  "rgba(DAE4E5FF)"
+colors.onBackground =  "rgba(F5DDD8FF)"
 
 colors.onError =  "rgba(690005FF)"
 
 colors.onErrorContainer =  "rgba(FFDAD6FF)"
 
-colors.onPrimary =  "rgba(462A00FF)"
+colors.onPrimary =  "rgba(00315DFF)"
 
-colors.onPrimaryContainer =  "rgba(FFDDB6FF)"
+colors.onPrimaryContainer =  "rgba(D4E3FFFF)"
 
-colors.onPrimaryFixed =  "rgba(2A1800FF)"
+colors.onPrimaryFixed =  "rgba(001C39FF)"
 
-colors.onPrimaryFixedVariant =  "rgba(643F00FF)"
+colors.onPrimaryFixedVariant =  "rgba(14487DFF)"
 
-colors.onSecondary =  "rgba(2B2E4DFF)"
+colors.onSecondary =  "rgba(472A0AFF)"
 
-colors.onSecondaryContainer =  "rgba(E0E0FFFF)"
+colors.onSecondaryContainer =  "rgba(FFDCBFFF)"
 
-colors.onSecondaryFixed =  "rgba(161937FF)"
+colors.onSecondaryFixed =  "rgba(2D1600FF)"
 
-colors.onSecondaryFixedVariant =  "rgba(414465FF)"
+colors.onSecondaryFixedVariant =  "rgba(61401EFF)"
 
-colors.onSurface =  "rgba(DAE4E5FF)"
+colors.onSurface =  "rgba(F5DDD8FF)"
 
-colors.onSurfaceVariant =  "rgba(B8CACCFF)"
+colors.onSurfaceVariant =  "rgba(E0BFB8FF)"
 
-colors.onTertiary =  "rgba(00363BFF)"
+colors.onTertiary =  "rgba(1B370DFF)"
 
-colors.onTertiaryContainer =  "rgba(A8EEF7FF)"
+colors.onTertiaryContainer =  "rgba(C9EDB1FF)"
 
-colors.onTertiaryFixed =  "rgba(001F23FF)"
+colors.onTertiaryFixed =  "rgba(072100FF)"
 
-colors.onTertiaryFixedVariant =  "rgba(004F56FF)"
+colors.onTertiaryFixedVariant =  "rgba(314E22FF)"
 
-colors.outline =  "rgba(839496FF)"
+colors.outline =  "rgba(A78A83FF)"
 
-colors.outlineVariant =  "rgba(394A4CFF)"
+colors.outlineVariant =  "rgba(58413CFF)"
 
-colors.primary =  "rgba(FBBA65FF)"
+colors.primary =  "rgba(A4C9FFFF)"
 
-colors.primaryContainer =  "rgba(643F00FF)"
+colors.primaryContainer =  "rgba(14487DFF)"
 
-colors.primaryFixed =  "rgba(FFDDB6FF)"
+colors.primaryFixed =  "rgba(D4E3FFFF)"
 
-colors.primaryFixedDim =  "rgba(FBBA65FF)"
+colors.primaryFixedDim =  "rgba(A4C9FFFF)"
 
 colors.scrim =  "rgba(000000FF)"
 
-colors.secondary =  "rgba(C2C4EBFF)"
+colors.secondary =  "rgba(EDBD92FF)"
 
-colors.secondaryContainer =  "rgba(414465FF)"
+colors.secondaryContainer =  "rgba(61401EFF)"
 
-colors.secondaryFixed =  "rgba(E0E0FFFF)"
+colors.secondaryFixed =  "rgba(FFDCBFFF)"
 
-colors.secondaryFixedDim =  "rgba(C2C4EBFF)"
+colors.secondaryFixedDim =  "rgba(EDBD92FF)"
 
 colors.shadow =  "rgba(000000FF)"
 
-colors.sourceColor =  "rgba(0C4744FF)"
+colors.sourceColor =  "rgba(D53143FF)"
 
-colors.surface =  "rgba(0C1516FF)"
+colors.surface =  "rgba(1C110EFF)"
 
-colors.surfaceBright =  "rgba(323B3CFF)"
+colors.surfaceBright =  "rgba(443632FF)"
 
-colors.surfaceContainer =  "rgba(182122FF)"
+colors.surfaceContainer =  "rgba(291D19FF)"
 
-colors.surfaceContainerHigh =  "rgba(222C2DFF)"
+colors.surfaceContainerHigh =  "rgba(342723FF)"
 
-colors.surfaceContainerHighest =  "rgba(2D3638FF)"
+colors.surfaceContainerHighest =  "rgba(40312EFF)"
 
-colors.surfaceContainerLow =  "rgba(141D1EFF)"
+colors.surfaceContainerLow =  "rgba(251916FF)"
 
-colors.surfaceContainerLowest =  "rgba(071011FF)"
+colors.surfaceContainerLowest =  "rgba(160C09FF)"
 
-colors.surfaceDim =  "rgba(0C1516FF)"
+colors.surfaceDim =  "rgba(1C110EFF)"
 
-colors.surfaceTint =  "rgba(FBBA65FF)"
+colors.surfaceTint =  "rgba(A4C9FFFF)"
 
-colors.surfaceVariant =  "rgba(394A4CFF)"
+colors.surfaceVariant =  "rgba(58413CFF)"
 
-colors.tertiary =  "rgba(8DD2DBFF)"
+colors.tertiary =  "rgba(AED197FF)"
 
-colors.tertiaryContainer =  "rgba(004F56FF)"
+colors.tertiaryContainer =  "rgba(314E22FF)"
 
-colors.tertiaryFixed =  "rgba(A8EEF7FF)"
+colors.tertiaryFixed =  "rgba(C9EDB1FF)"
 
-colors.tertiaryFixedDim =  "rgba(8DD2DBFF)"
+colors.tertiaryFixedDim =  "rgba(AED197FF)"
 
 
 return colors
