@@ -1,0 +1,43 @@
+/**
+ * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀█░█▀▄░▀█▀░█░█░█▀█░█▀▀░█░█
+ * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▀▀░█▀▄░░█░░▀▄▀░█▀█░█░░░░█░
+ * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░░░▀░▀░▀▀▀░░▀░░▀░▀░▀▀▀░░▀░
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Privacy
+ */
+
+{
+  "privacy": {
+    "icon-spacing": 0, //  The spacing between each privacy icon. Prefer CSS.
+    "icon-size": 16, //  The size of each privacy icon. Set 0 for auto size.
+
+    "transition-duration": 250, //  The reveal and hide transition duration
+
+    //  Which privacy modules to monitor. See Modules Configuration for more information.
+    "modules": [
+      {
+        "type": "screenshare", //  Specifies which module to use and configure.
+        "tooltip": true, //  Option to disable tooltip on hover.
+        "tooltip-icon-size": 20, //  The size of each icon in the tooltip.
+        "icon-name": "screen-share-symbolic", //  Overrides the default icon for the module. Accepts any valid GTK icon name.
+      },
+      {
+        "type": "audio-out", //  Specifies which module to use and configure.
+        "tooltip": true, //  Option to disable tooltip on hover.
+        "tooltip-icon-size": 20, //  The size of each icon in the tooltip.
+      },
+      {
+        "type": "audio-in", //  Specifies which module to use and configure.
+        "tooltip": true, //  Option to disable tooltip on hover.
+        "tooltip-icon-size": 20, //  The size of each icon in the tooltip.
+        "icon-name": "microphone-sensitivity-high-symbolic", //  Overrides the default icon for the module. Accepts any valid GTK icon name.
+      },
+    ],
+
+    //  Ignore streams with stream.monitor property.
+    "ignore-monitor": true,
+
+    //  Additional streams to be ignored. See Ignore Configuration for more information.
+    "ignore": [],
+  },
+}

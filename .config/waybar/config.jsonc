@@ -21,11 +21,13 @@
     "~/hyprdots/.config/waybar/modules/mpris.jsonc",
     "~/hyprdots/.config/waybar/modules/idle-inhibitor.jsonc",
     "~/hyprdots/.config/waybar/modules/network.jsonc",
+    "~/hyprdots/.config/waybar/modules/privacy.jsonc",
   ],
 
   "modules-left": ["hyprland/workspaces", "mpris"],
   "modules-center": ["power-profiles-daemon", "clock", "custom/swaync"],
   "modules-right": [
+    "privacy",
     "idle_inhibitor",
     "pulseaudio",
     "network",
