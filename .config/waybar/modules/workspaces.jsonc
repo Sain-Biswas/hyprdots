@@ -2,17 +2,21 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█░█░█▀█░█▀▄░█░█░█▀▀░█▀█░█▀█░█▀▀░█▀▀░█▀▀
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▄█░█░█░█▀▄░█▀▄░▀▀█░█▀▀░█▀█░█░░░█▀▀░▀▀█
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀▀▀
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
+ * Also, https://github.com/Alexays/Waybar/wiki/Module:-Hyprland
  */
 
 {
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{icon}", //  The format, how information should be displayed.
 
+    //  Based on the workspace name and state, the corresponding icon gets selected.
     "format-icons": {
       "active": "",
       "default": "",
     },
 
-    "on-click": "activate",
+    "on-click": "activate", //  Can be used to activate or close workspaces when clicked on
   },
 }

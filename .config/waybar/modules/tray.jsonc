@@ -2,16 +2,18 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░▀█▀░█▀▄░█▀█░█░█
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░░█░░█▀▄░█▀█░░█░
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░░▀░░▀░▀░▀░▀░░▀░
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Tray
  */
+
 {
   "tray": {
-    "icon-size": 16,
-    "spacing": 4,
+    "icon-size": 16, //  Defines the size of the tray icons.
+    "spacing": 4, //  Defines the spacing between the tray icons.
 
-    "show-passive-items": true,
+    "show-passive-items": true, //  Defines visibility of the tray icons with Passive status.
 
-    "icons": {
-      "blueman": "bluetooth",
-    },
+    //  Override icon mapping for tray icons.
+    "icons": {},
   },
 }

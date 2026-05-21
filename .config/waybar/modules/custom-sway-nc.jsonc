@@ -2,15 +2,19 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░█░█░█▀█░█░█░░░█▀█░█▀▀
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░▀▀█░█▄█░█▀█░░█░░░░█░█░█░░
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀▀░▀░▀░▀░▀░░▀░░░░▀░▀░▀▀▀
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Custom
+ * Also, https://github.com/ErikReider/SwayNotificationCenter#waybar-example
  */
 
 {
   "custom/swaync": {
-    "tooltip": true,
-    "tooltip-format": "Left Click -> Launch Notification Center\nRight Click -> Do not Disturb",
+    "tooltip": true, //  Option to enable tooltip on hover.
+    "tooltip-format": "Left Click -> Launch Notification Center\nRight Click -> Do not Disturb", //  The format of the tooltip.
 
-    "format": "{icon} {text}",
+    "format": "{icon} {text}", //  The format, how information should be displayed. On {} data gets inserted.
 
+    //  If the type is an array, then based on the set percentage, the corresponding icon gets selected (low to high). If the type is an object, then the icon will be selected according to alt string from the output. If the type is a string, it will be pasted as is. NOTE: Arrays can be nested into objects. Icons will be selected first according to alt then percentage.
     "format-icons": {
       "none": "",
       "notification": "",
@@ -25,14 +29,14 @@
       "dnd-inhibited-notification": "󱏪",
     },
 
-    "return-type": "json",
+    "return-type": "json", //  Return type of the exec command
 
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
+    "exec-if": "which swaync-client", //  The path to a script, which determines if the script in exec should be executed. exec will be executed if the exit code of exec-if equals 0.
+    "exec": "swaync-client -swb", //  The swaync client command that provides data needed by waybar.
 
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
+    "on-click": "sleep 0.1 && swaync-client -t -sw", //  Command to execute when clicked on the module.
+    "on-click-right": "swaync-client -d -sw", //  Command to execute when you right clicked on the module.
 
-    "escape": true,
+    "escape": true, //  Option to enable escaping of script output
   },
 }

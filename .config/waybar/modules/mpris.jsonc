@@ -2,15 +2,18 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▄█░█▀█░█▀▄░▀█▀░█▀▀
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░█░█▀▀░█▀▄░░█░░▀▀█
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-MPRIS
  */
 
 {
   "mpris": {
-    "format": "{player_icon} {title}",
-    "format-paused": "{status_icon} <i>{title}</i>",
+    "format": "{player_icon} {title}", //  The text format.
+    "format-paused": "{status_icon} <i>{title}</i>", //  The text format to be shown when audio is paused.
 
-    "tooltip-format": "Source -> {player_icon}  {player}\nTitle -> {title}\nArtist -> {artist}\nAlbum -> {album}\nLength -> {position}/{length}\nStatus -> {status_icon}  {status}",
+    "tooltip-format": "Source -> {player_icon}  {player}\nTitle -> {title}\nArtist -> {artist}\nAlbum -> {album}\nLength -> {position}/{length}\nStatus -> {status_icon}  {status}", //  Format of the default tooltip.
 
+    //  Allows setting {player-icon} based on player-name property.
     "player-icons": {
       "default": "󰎆",
       "mpv": "",
@@ -20,13 +23,14 @@
       "spotify": "󰓇",
     },
 
+    //  Allows setting {status-icon} based on player status (playing, paused, stopped).
     "status-icons": {
       "paused": "",
       "playing": "",
       "Stopped": "",
     },
 
-    "title-len": 60,
-    "interval": 1,
+    "title-len": 60, //  Maximum length of title to be shown. If title is longer it is truncated with ...
+    "interval": 1, //  Duration after which to update the player status.
   },
 }

@@ -2,35 +2,38 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀█░█▀▀░▀█▀░█░█░█▀█░█▀▄░█░█
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█░█░█▀▀░░█░░█▄█░█░█░█▀▄░█▀▄
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀░▀░▀▀▀░░▀░░▀░▀░▀▀▀░▀░▀░▀░▀
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Network
  */
 
 {
   "network": {
-    "format": "{ifname}",
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "format": "{ifname}", //  The format, how information should be displayed. This format is used when other formats aren't specified.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗", //  The format, how information should be displayed in the tooltip. This format is used when other formats aren't specified.
 
-    "format-wifi": "{icon}",
-    "tooltip-format-wifi": "Interface : {ifname} \nSSID : {essid} \nSignal strength: {signaldBm}dBm {signalStrength}% \nFrequency : {frequency}GHz \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6} \n",
+    "format-wifi": "{icon}", //  This format is used when a wireless interface is displayed.
+    "tooltip-format-wifi": "Interface : {ifname} \nSSID : {essid} \nSignal strength: {signaldBm}dBm {signalStrength}% \nFrequency : {frequency}GHz \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6} \n", //  This format is used when a wireless interface is displayed.
 
-    "format-ethernet": "󰈀  {bandwidthUpBits}  {bandwidthDownBits}",
-    "tooltip-format-ethernet": "Interface : {ifname} \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6}",
+    "format-ethernet": "󰈀  {bandwidthUpBits}  {bandwidthDownBits}", //  This format is used when a ethernet interface is displayed.
+    "tooltip-format-ethernet": "Interface : {ifname} \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6}", //  This format is used when a ethernet interface is displayed.
 
-    "format-linked": "   {bandwidthUpBits}  {bandwidthDownBits}",
-    "tooltip-format-linked": "Interface : {ifname} \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6}",
+    "format-linked": "   {bandwidthUpBits}  {bandwidthDownBits}", //  This format is used when a linked interface with no ip address is displayed.
+    "tooltip-format-linked": "Interface : {ifname} \nIP Address : {ipaddr}/{cidr} \nGateway : {gwaddr} \nSubnetmask : V4-{netmask}/{cidr} -- V6-{netmask6}/{cidr6}", //  This format is used when a linked interface with no ip address is displayed.
 
-    "format-disabled": "󰲛",
-    "tooltip-format-disabled": "Disabled",
+    "format-disabled": "󰲛", //  This format is used when the displayed interface is disabled.
+    "tooltip-format-disabled": "Disabled", //  This format is used when the displayed interface is disabled.
 
-    "format-disconnected": "󰯡",
-    "tooltip-format-disconnected": "Disconnected",
+    "format-disconnected": "󰯡", //  This format is used when the displayed interface is disconnected.
+    "tooltip-format-disconnected": "Disconnected", //  This format is used when the displayed interface is disconnected.
 
+    //  Based on the current capacity, the corresponding icon gets selected. The order is low to high. Or by the state if it is an object.
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 
-    "family": "ipv4_6",
-    "interval": 1,
+    "family": "ipv4_6", //  The address family that is used for the format replacement {ipaddr} and to determine if a network connection is present. Set it to ipv4_6 to display both.
+    "interval": 1, //  The interval in which the network information gets polled (e.g. signal strength).
 
-    "format-alt": " {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-alt": " {bandwidthUpBits}  {bandwidthDownBits}", //  On click, toggle to alternative format
 
-    "on-click-right": "alacritty -e nmtui",
+    "on-click-right": "alacritty -e nmtui", //  Command to execute when you right clicked on the module.
   },
 }

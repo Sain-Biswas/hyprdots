@@ -2,6 +2,8 @@
  * ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▄░█▀█░▀█▀░▀█▀░█▀▀░█▀▄░█░█
  * ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▀▄░█▀█░░█░░░█░░█▀▀░█▀▄░░█░
  * ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀░░▀░▀░░▀░░░▀░░▀▀▀░▀░▀░░▀░
+
+ * Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Battery
  */
 
 {
@@ -29,13 +31,19 @@
     },
   },
 
+  /*
+   * Upower
+   */
+
   "upower": {
-    "icon-size": 25, //  Defines the size of the icons. Set 0 for auto size.
+    "icon-size": 22, //  Defines the size of the icons. Set 0 for auto size.
     "hide-if-empty": true, //  Defines visibility of the module if no devices can be found.
 
-    "format": "{percentage}", //  The text format.
+    "format": " {percentage}", //  The text format.
 
     "tooltip": true, //  Option to disable tooltip on hover.
+    "tooltip-format": " {time}", //  The tooltip format.
+
     "tooltip-spacing": 20, //  Defines the spacing between the tooltip device name and device battery status.
   },
 }
