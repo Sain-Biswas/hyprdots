@@ -27,7 +27,7 @@
 
   "fit-to-screen": true,
 
-  "widgets": ["mpris", "inhibitors", "title", "notifications", "dnd"],
+  "widgets": ["mpris", "title", "notifications", "dnd"],
 
   "relative-timestamps": true,
 
@@ -50,24 +50,22 @@
     "notifications": {
       "vexpand": true
     },
-    "inhibitors": {
-      "text": "Inhibitors",
-      "button-text": "Clear All",
-      "clear-all-button": true
-    },
+
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
       "button-text": ""
     },
+
     "dnd": {
       "text": "Do Not Disturb"
     },
+
     "mpris": {
-      "blacklist": [],
       "autohide": false,
-      "show-album-art": "always",
-      "loop-carousel": false
+      "show-album-art": "when-available",
+      "loop-carousel": false,
+      "blacklist": ["org.mpris.MediaPlayer2.playerctld"]
     }
   }
 }

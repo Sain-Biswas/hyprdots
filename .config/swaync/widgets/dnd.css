@@ -1,0 +1,44 @@
+/**
+* ░█▀▀░█░█░█▀█░█░█░░░█▀█░█▀▀░░░░░░░░░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░▀▀█░█▄█░█▀█░░█░░░░█░█░█░░░░░▄▄▄░░░█░█░█░█░█░█░░░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀▀▀░▀░▀░▀░▀░░▀░░░░▀░▀░▀▀▀░░░░░░░░░▀▀░░▀░▀░▀▀░░░░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+.widget-dnd {
+    margin: 10px;
+    margin-top: 0px;
+    padding: 0px;
+
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.widget-dnd label {
+    color: @on_surface;
+}
+
+.widget-dnd > switch {
+    font-size: 0.5rem;
+    border-radius: 999999px;
+    box-shadow: none;
+
+    transition: background 150ms ease;
+
+    background: @surface_bright;
+    outline: 2px soild @outline;
+}
+
+.widget-dnd > switch:checked {
+    background: @primary;
+}
+
+.widget-dnd > switch slider {
+    border-radius: 999999px;
+    transition: background 150ms ease;
+
+    background: @on_surface;
+}
+
+.widget-dnd > switch:checked slider {
+    background: @on_primary;
+}

@@ -1,0 +1,172 @@
+/**
+* ░█▀▀░█░█░█▀█░█░█░░░█▀█░█▀▀░░░░░░░░░█▀█░█▀█░▀█▀░▀█▀░█▀▀░▀█▀░█▀▀░█▀█░▀█▀░▀█▀░█▀█░█▀█░█▀▀░░░░░░░░░█▀▀░▀█▀░█░█░█░░░▀█▀░█▀█░█▀▀
+* ░▀▀█░█▄█░█▀█░░█░░░░█░█░█░░░░░▄▄▄░░░█░█░█░█░░█░░░█░░█▀▀░░█░░█░░░█▀█░░█░░░█░░█░█░█░█░▀▀█░░░▄▄▄░░░▀▀█░░█░░░█░░█░░░░█░░█░█░█░█
+* ░▀▀▀░▀░▀░▀░▀░░▀░░░░▀░▀░▀▀▀░░░░░░░░░▀░▀░▀▀▀░░▀░░▀▀▀░▀░░░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀░░░░░░░░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+*/
+
+/* --- NOTIFICATION CONTAINER --- */
+.notification {
+    padding: 6px 7px;
+    border-radius: 10px;
+    transition:
+        background 150ms ease,
+        border-color 150ms ease,
+        box-shadow 150ms ease;
+
+    box-shadow: 0 2px 12px @shadow;
+    background: @surface;
+    border: 1px solid @outline;
+}
+
+.notification:hover {
+    background: @surface_bright;
+    border-color: @outline;
+    box-shadow: 0 4px 20px @shadow;
+}
+
+/* Critical State */
+.notification.critical {
+    background: @error_container;
+    color: @on_error_container;
+    border: 1px solid @error_container;
+    box-shadow:
+        0 4px 10px @error_container,
+        inset 0 0 0 1px @error;
+}
+
+.notification.critical:hover {
+    background: @on_error;
+    color: @error;
+}
+
+/* --- NOTIFICATION CONTENT --- */
+.app-name {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: @on_surface;
+}
+
+.time {
+    font-size: 10px;
+    color: @on_surface;
+}
+
+.summary {
+    margin: 4px 0 2px 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: @on_surface;
+}
+
+.body {
+    margin: 0 0 2px 4px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: @on_surface;
+}
+
+/* --- ACTIONS & BUTTONS --- */
+.notification-default-action {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.notification-action {
+    margin: 4px 3px 0 3px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: @on_primary;
+    background: @primary;
+    border: 10px solid @outline;
+    border-radius: 20px;
+    transition:
+        background 150ms ease,
+        border-color 150ms ease;
+}
+
+.notification-action:hover {
+    background: @primary_container;
+    color: @on_primary_container;
+    border-color: @outline;
+}
+
+.close-button {
+    min-width: 22px;
+    min-height: 22px;
+    padding: 2px;
+    font-size: 13px;
+    color: @error;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    transition:
+        background 150ms ease,
+        color 150ms ease;
+}
+
+.close-button:hover {
+    color: @on_error;
+    background: @error;
+}
+
+/* --- GROUPING & POPUPS --- */
+row.notification-group {
+    margin: 4px 0;
+    padding: 4px 1px;
+    background: @surface_variant;
+    border-radius: 15px;
+}
+
+.notification-popup {
+    margin: 8px;
+    background: @surface_variant;
+    border: 1px solid @outline;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px @shadow;
+    animation: slideInRight 180ms ease both;
+}
+
+.notification-popup.critical {
+    border-color: @error;
+    box-shadow:
+        0 8px 36px @error_container,
+        inset 0 0 0 1px @error;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- EMPTY STATE & MISC --- */
+.notification-placeholder {
+    color: @on_surface_variant;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    margin: 24px 0 24px 0;
+}
+
+.notification-group-headers {
+    color: @on_surface_variant;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 6px 4px 2px 4px;
+}
+
+separator {
+    background: @outline_variant;
+    min-height: 1px;
+    margin: 4px 0 4px 0;
+    border: none;
+}
