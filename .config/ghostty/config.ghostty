@@ -1,8 +1,8 @@
 font-family = Maple Mono NF
 font-size = 14
 
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 10
+window-padding-y = 10
 window-decoration = none
 window-theme = dark
 
