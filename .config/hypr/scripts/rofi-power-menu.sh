@@ -31,7 +31,7 @@ error() {
 
 # Check if needed dependencies are present
 check_dependencies() {
-    local deps=("rofi" "hyprlock" "hyprshutdown" "systemd")
+    local deps=("rofi" "hyprlock" "hyprshutdown")
 
     for cmd in "${deps[@]}"; do
         if ! command -v "$cmd" >/dev/null 2>&1; then
