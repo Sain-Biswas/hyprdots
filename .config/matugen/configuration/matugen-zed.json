@@ -743,7 +743,7 @@
         "syntax": {
           "boolean": {
             "color": "{{colors.tertiary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "comment": {
@@ -763,7 +763,7 @@
           },
           "constructor": {
             "color": "{{colors.secondary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "emphasis": {
@@ -774,16 +774,16 @@
           "emphasis.strong": {
             "color": "{{colors.primary.dark.hex}}",
             "font_style": null,
-            "font_weight": 700
+            "font_weight": 800
           },
           "function": {
             "color": "{{colors.primary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "keyword": {
             "color": "{{colors.secondary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "number": {
@@ -798,7 +798,7 @@
           },
           "property": {
             "color": "{{colors.on_surface.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "punctuation": {
@@ -823,7 +823,7 @@
           },
           "punctuation.special": {
             "color": "{{colors.secondary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "string": {
@@ -853,7 +853,7 @@
           },
           "tag": {
             "color": "{{colors.secondary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "text.literal": {
@@ -863,7 +863,7 @@
           },
           "type": {
             "color": "{{colors.primary_fixed.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           },
           "variable": {
@@ -873,7 +873,7 @@
           },
           "variable.special": {
             "color": "{{colors.primary.dark.hex}}",
-            "font_style": null,
+            "font_style": "italic",
             "font_weight": null
           }
         }

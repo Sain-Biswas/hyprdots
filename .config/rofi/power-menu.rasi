@@ -1,51 +1,51 @@
 @import "~/hyprdots/.config/rofi/colors.rasi"
 
 window {
-    padding: 10px;
-    border-radius: 25px;
-    width: 12%;
-    background-color: var(surface);
+    padding                : 10px;
+    border-radius          : 25px;
+    width                  : 12%;
+    background-color       : var(surface);
 }
 
 mainbox {
-    padding: 10px;
-    border-radius: 15px;
-    orientation: vertical;
-    background-color: var(surface);
-    children: [ "listview" ];
+    padding                : 10px;
+    border-radius          : 15px;
+    orientation            : vertical;
+    background-color       : var(surface);
+    children               : [ "listview" ];
 }
 
 listview {
-    padding: 0px;
-    background-color: transparent;
-    text-color: var(on-surface);
-    lines: 6;
+    padding                : 0px;
+    background-color       : transparent;
+    text-color             : var(on-surface);
+    lines                  : 6;
 }
 
 element {
-    padding: 2px;
-    background-color: transparent;
-    text-color: inherit;
-    cursor: pointer;
-    spacing: 5px;
-    border-radius: 5px;
-    children: [ "element-text" ];
+    padding                : 2px;
+    background-color       : transparent;
+    text-color             : inherit;
+    cursor                 : pointer;
+    spacing                : 5px;
+    border-radius          : 5px;
+    children               : [ "element-text" ];
 }
 
 element normal.normal {
-    background-color: transparent;
-    text-color: inherit;
+    background-color       : transparent;
+    text-color             : inherit;
 }
 
 element selected.normal {
-    background-color: var(primary);
-    text-color: var(on-primary);
+    background-color       : var(primary);
+    text-color             : var(on-primary);
 }
 
 element-text {
-    background-color: transparent;
-    cursor: inherit;
-    text-color: inherit;
-    vertical-align: 0.5;
-    horizontal-align: 0.5;
+    background-color       : transparent;
+    cursor                 : inherit;
+    text-color             : inherit;
+    vertical-align         : 0.5;
+    horizontal-align       : 0.5;
 }

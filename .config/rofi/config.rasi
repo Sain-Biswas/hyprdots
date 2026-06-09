@@ -5,16 +5,16 @@
 */
 
 configuration {
-    font: "Maple Mono NF 14";
-    show-icons: true;
-    terminal: "alacritty";
+    font                       : "Maple Mono NF 14";
+    show-icons                 : true;
+    terminal                   : "alacritty";
 
     timeout {
-        action: "kb-cancel";
-        delay:  0;
+        action                 : "kb-cancel";
+        delay                  :  0;
     }
     filebrowser {
-        directories-first: true;
-        sorting-method:    "name";
+        directories-first      : true;
+        sorting-method         : "name";
     }
 }
