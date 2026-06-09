@@ -4,6 +4,22 @@
 #  ░█▀▄░█▀▀░█▀▀░█░░░█▀▀░█░░░░█░░█░█░█▀▄░░░█░█░█▀▀░█░█░█▀█░░█░░█▀▀
 #  ░▀░▀░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░░░▀▀▀░▀░░░▀▀░░▀░▀░░▀░░▀▀▀
 
+# Logging Utilities
+error() {
+    notify-send -u critical -i script "Open Rofi Menu" "[ERROR] $*"
+}
+
+# Check if needed dependencies are present
+check_dependencies() {
+    local deps=("reflector" "pacman")
+
+    for cmd in "${deps[@]}"; do
+        if ! command -v "$cmd" >/dev/null 2>&1; then
+            error "Required dependency '$cmd' is not installed."
+            exit 2
+        fi
+    done
+}
 
 : '
 Refresh Arch Linux pacman mirrorlist using Reflector

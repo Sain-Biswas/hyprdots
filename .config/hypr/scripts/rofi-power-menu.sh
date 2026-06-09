@@ -19,6 +19,29 @@ Themes:
     $HOME/hyprdots/.config/rofi/confirm-dialog.rasi
 '
 
+# Strict Mode
+set -euo pipefail
+
+
+# Logging Utilities
+error() {
+    notify-send -u critical -i script "Refresh theme script" "[ERROR] $*"
+}
+
+
+# Check if needed dependencies are present
+check_dependencies() {
+    local deps=("rofi" "hyprlock" "hyprshutdown" "systemd")
+
+    for cmd in "${deps[@]}"; do
+        if ! command -v "$cmd" >/dev/null 2>&1; then
+            error "Required dependency '$cmd' is not installed."
+            exit 2
+        fi
+    done
+}
+
+
 : '
 Display the power menu using Rofi and return the selected action.
 
