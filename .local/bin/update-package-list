@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
 
 #  ░█▀▄░█▀▀░█▀▀░█░░░█▀▀░█▀▀░▀█▀░█▀█░█▀▄░░░█░█░█▀█░█▀▄░█▀█░▀█▀░█▀▀
 #  ░█▀▄░█▀▀░█▀▀░█░░░█▀▀░█░░░░█░░█░█░█▀▄░░░█░█░█▀▀░█░█░█▀█░░█░░█▀▀
@@ -20,6 +20,9 @@ check_dependencies() {
         fi
     done
 }
+check_dependencies
+
+
 
 : '
 Refresh Arch Linux pacman mirrorlist using Reflector
@@ -43,6 +46,8 @@ Refresh Arch Linux pacman mirrorlist using Reflector
     --save: Save the mirrorlist to pacman mirrorlist and overwrite it.
 '
 sudo reflector --country India,Singapore,Japan --protocol https --latest 20 --age 12 --sort score --save /etc/pacman.d/mirrorlist
+
+
 
 : '
 Refresh package databases and upgrade the system

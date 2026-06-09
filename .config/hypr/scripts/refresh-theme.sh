@@ -41,6 +41,8 @@ check_dependencies() {
 
     debug "All dependencies are satisfied."
 }
+check_dependencies
+
 
 
 # Refresh waybar configuration and styling

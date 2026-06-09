@@ -40,6 +40,8 @@ check_dependencies() {
         fi
     done
 }
+check_dependencies
+
 
 
 : '

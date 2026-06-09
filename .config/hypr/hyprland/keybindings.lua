@@ -24,6 +24,7 @@ hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("uwsm app -- google-chrome-stab
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh app"))        --  Open Rofi Application Menu
 hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh emoji")) --  Open Rofi Emoji Selector
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh window"))   --  Open Rofi menu for opened application window
+hl.bind("Print", hl.dsp.exec_cmd(scripts .. "rofi-screenshot-menu.sh"))                --  Open Rofi Screenshot menu
 
 hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd(scripts .. "rofi-power-menu.sh"))   --  Open Rofi Power menu
 -- hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(utility .. "/utility-clipboard"))                                        --  Open Cliphist Clipboard manager using Rofi
@@ -36,7 +37,6 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())                          
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))                                      --  Toggle currently active window between tilled and floating state
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())                                                                  --  dwindle only
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))                                                            -- dwindle only
-
 
 --  Misc.
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(scripts .. "refresh-theme.sh")) --  Refresh currently applied color scheme
