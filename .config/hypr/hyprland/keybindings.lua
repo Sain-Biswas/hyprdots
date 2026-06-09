@@ -25,7 +25,7 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh app")) 
 hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh emoji")) --  Open Rofi Emoji Selector
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh window"))   --  Open Rofi menu for opened application window
 
--- hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd(utility .. "/utility-power-menu"))                               --  Open Rofi Power menu
+hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd(scripts .. "rofi-power-menu.sh"))   --  Open Rofi Power menu
 -- hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(utility .. "/utility-clipboard"))                                        --  Open Cliphist Clipboard manager using Rofi
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())                                                                   --  Close currently active window
