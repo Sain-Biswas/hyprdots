@@ -21,13 +21,15 @@ hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("uwsm app -- google-chrome-stab
 
 
 --  System KeyBindings
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh app"))                                     --  Open Rofi Application Menu
-hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh emoji"))                              --  Open Rofi Emoji Selector
-hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh window"))                                --  Open Rofi menu for opened application window
-hl.bind("Print", hl.dsp.exec_cmd(scripts .. "rofi-screenshot-menu.sh"))                                             --  Open Rofi Screenshot menu
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh app"))        --  Open Rofi Application Menu
+hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh emoji")) --  Open Rofi Emoji Selector
+hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(scripts .. "open-rofi-menu.sh window"))   --  Open Rofi menu for opened application window
+hl.bind("Print", hl.dsp.exec_cmd(scripts .. "rofi-screenshot-menu.sh"))                --  Open Rofi Screenshot menu
 
-hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd(scripts .. "rofi-power-menu.sh"))                                --  Open Rofi Power menu
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(scripts .. "rofi-clipboard.sh"))                                         --  Open Cliphist Clipboard manager using Rofi
+hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd(scripts .. "rofi-power-menu.sh"))   --  Open Rofi Power menu
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(scripts .. "rofi-clipboard.sh"))            --  Open Cliphist Clipboard manager using Rofi
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(scripts .. "rofi-colorpicker.sh"))          --  Open Cliphist Clipboard manager using Rofi
+
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())                                                                   --  Close currently active window
 hl.bind(mainMod .. " + Delete",

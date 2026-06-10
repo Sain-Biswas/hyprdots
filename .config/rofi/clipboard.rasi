@@ -1,166 +1,166 @@
 @import "~/hyprdots/.config/rofi/colors.rasi"
 
 window {
-    padding: 10px;
-    border-radius: 25px;
-    background-color: var(surface);
+    padding                : 10px;
+    border-radius          : 25px;
+    background-color       : var(surface);
 }
 
 mainbox {
-    padding: 10px;
-    border-radius: 15px;
-    orientation: vertical;
-    background-color: var(surface);
-    children: [ "inputbar", "listview" ];
+    padding                : 10px;
+    border-radius          : 15px;
+    orientation            : vertical;
+    background-color       : var(surface);
+    children               : [ "inputbar", "listview" ];
 }
 
 
 inputbar {
-    padding: 5px;
-    spacing: 0px;
-    text-color: var(on-surface);
-    background-color: transparent;
-    children: [ "prompt", "textbox-prompt-colon", "entry", "overlay", "num-filtered-rows", "textbox-num-sep", "num-rows", "case-indicator" ];
+    padding                : 5px;
+    spacing                : 0px;
+    text-color             : var(on-surface);
+    background-color       : transparent;
+    children               : [ "prompt", "textbox-prompt-colon", "entry", "overlay", "num-filtered-rows", "textbox-num-sep", "num-rows", "case-indicator" ];
 }
 
 overlay {
-    padding: 0px 0.2em;
-    spacing: 0px;
-    margin: 0px 0.2em;
-    background-color: transparent;
-    foreground-color: var(surface);
-    text-color: var(surface);
+    padding                : 0px 0.2em;
+    spacing                : 0px;
+    margin                 : 0px 0.2em;
+    background-color       : transparent;
+    foreground-color       : var(surface);
+    text-color             : var(surface);
 }
 
 case-indicator {
-    spacing: 0px;
-    background-color: transparent;
-    text-color: var(error);
+    spacing                : 0px;
+    background-color       : transparent;
+    text-color             : var(error);
 }
 
 entry {
-    text-color: var(primary);
-    background-color: transparent;
-    cursor: text;
-    spacing: 0px;
-    placeholder-color: var(primary-fixed);
-    placeholder: 'Search clipboard history...';
+    text-color             : var(primary);
+    background-color       : transparent;
+    cursor                 : text;
+    spacing                : 0px;
+    placeholder-color      : var(primary-fixed);
+    placeholder            : 'Search clipboard history...';
 }
 
 prompt {
-    spacing: 0px;
-    background-color: transparent;
-    text-color: var(tertiary);
+    spacing                : 0px;
+    background-color       : transparent;
+    text-color             : var(tertiary);
 }
 
 textbox-prompt-colon {
-    margin: 0px 0.3em 0px 0px;
-    expand: false;
-    background-color: transparent;
-    str: ":";
-    spacing: 0px;
-    text-color: var(error);
+    margin                 : 0px 0.3em 0px 0px;
+    expand                 : false;
+    background-color       : transparent;
+    str                    : ":";
+    spacing                : 0px;
+    text-color             : var(error);
 }
 
 textbox-num-sep {
-    margin: 0px;
-    expand: false;
-    background-color: transparent;
-    str: "/";
-    spacing: 0px;
-    text-color: var(error);
+    margin                  : 0px;
+    expand                  : false;
+    background-color        : transparent;
+    str                     : "/";
+    spacing                 : 0px;
+    text-color              : var(error);
 }
 
 num-filtered-rows {
-    spacing: 0px;
-    background-color: transparent;
-    text-color: var(tertiary);
+    spacing                : 0px;
+    background-color       : transparent;
+    text-color             : var(tertiary);
 }
 num-rows {
-    spacing: 0px;
-    background-color: transparent;
-    text-color: var(tertiary);
+    spacing                : 0px;
+    background-color       : transparent;
+    text-color             : var(tertiary);
 }
 
 
 listview {
-    padding: 0px;
-    background-color: transparent;
-    text-color: var(on-surface);
-    lines: 10;
+    padding                : 0px;
+    background-color       : transparent;
+    text-color             : var(on-surface);
+    lines                  : 10;
 }
 
 scrollbar {
-    width: 4px;
-    padding: 0px;
-    handle-width: 6px;
-    border: 0px;
-    handle-color: var(primary);
+    width                  : 4px;
+    padding                : 0px;
+    handle-width           : 6px;
+    border                 : 0px;
+    handle-color           : var(primary);
 }
 
 scrollbar-handle {
-    border-radius: 4px;
-    width: 4px;
+    border-radius          : 4px;
+    width                  : 4px;
 }
 
 element {
-    padding: 2px;
-    background-color: transparent;
-    text-color: inherit;
-    cursor: pointer;
-    spacing: 5px;
-    border-radius: 5px;
+    padding                : 2px;
+    background-color       : transparent;
+    text-color             : inherit;
+    cursor                 : pointer;
+    spacing                : 5px;
+    border-radius          : 5px;
 }
 
 element normal.normal {
-    background-color: transparent;
-    text-color: inherit;
+    background-color       : transparent;
+    text-color             : inherit;
 }
 element normal.urgent {
-    background-color: var(error-container);
-    text-color: var(on-error-container);
+    background-color       : var(error-container);
+    text-color             : var(on-error-container);
 }
 element normal.active {
-    background-color: var(tertiary);
-    text-color: var(on-tertiary);
+    background-color       : var(tertiary);
+    text-color             : var(on-tertiary);
 }
 
 element selected.normal {
-    background-color: var(primary);
-    text-color: var(on-primary);
+    background-color       : var(primary);
+    text-color             : var(on-primary);
 }
 element selected.urgent {
-    background-color: var(error);
-    text-color: var(on-error);
+    background-color       : var(error);
+    text-color             : var(on-error);
 }
 element selected.active {
-    background-color: var(tertiary);
-    text-color: var(on-tertiary);
+    background-color       : var(tertiary);
+    text-color             : var(on-tertiary);
 }
 
 element alternate.normal {
-    background-color: transparent;
-    text-color: inherit;
+    background-color       : transparent;
+    text-color             : inherit;
 }
 element alternate.urgent {
-    background-color: var(error-container);
-    text-color: var(on-error-container);
+    background-color       : var(error-container);
+    text-color             : var(on-error-container);
 }
 element alternate.active {
-    background-color: var(tertiary);
-    text-color: var(on-tertiary);
+    background-color       : var(tertiary);
+    text-color             : var(on-tertiary);
 }
 
 element-text {
-    background-color: transparent;
-    cursor: inherit;
-    text-color: inherit;
-    vertical-align: 0.5;
+    background-color       : transparent;
+    cursor                 : inherit;
+    text-color             : inherit;
+    vertical-align         : 0.5;
 }
 
 element-icon {
-    background-color: transparent;
-    size: 1.5em;
-    cursor: inherit;
-    text-color: inherit;
+    background-color       : transparent;
+    size                   : 1.5em;
+    cursor                 : inherit;
+    text-color             : inherit;
 }
