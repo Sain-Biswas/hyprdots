@@ -17,18 +17,14 @@ ROFI_THEME_WINDOWS="$HOME/hyprdots/.config/rofi/active-window.rasi"
 
 
 # Logging Utilities
-log() {
-    notify-send -u normal -i script "Open Rofi Menu" "[INFO] $*"
-}
-
 debug() {
     if [[ "$DEBUG" == true ]]; then
-        notify-send -u low -i script "Open Rofi Menu" "[DEBUG] $*"
+        notify-send -a rofi-menu -u low -i script "Open Rofi Menu" "[DEBUG] $*"
     fi
 }
 
 error() {
-    notify-send -u critical -i script "Open Rofi Menu" "[ERROR] $*"
+    notify-send -a rofi-menu -u critical -i script "Open Rofi Menu" "[ERROR] $*"
 }
 
 

@@ -38,7 +38,7 @@ set -euo pipefail
 
 # Logging Utilities
 error() {
-    notify-send -u critical -i script "Refresh theme script" "[ERROR] $*"
+    notify-send -a screenshot-utility -u critical -i script "Screenshot Utility" "[ERROR] $*"
 }
 
 

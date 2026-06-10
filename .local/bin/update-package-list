@@ -4,9 +4,13 @@
 #  ░█▀▄░█▀▀░█▀▀░█░░░█▀▀░█░░░░█░░█░█░█▀▄░░░█░█░█▀▀░█░█░█▀█░░█░░█▀▀
 #  ░▀░▀░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░░░▀▀▀░▀░░░▀▀░░▀░▀░░▀░░▀▀▀
 
+
+# Strict Mode
+set -euo pipefail
+
 # Logging Utilities
 error() {
-    notify-send -u critical -i script "Open Rofi Menu" "[ERROR] $*"
+    notify-send -a reflector -u critical -i script "Update Package Mirrorlist" "[ERROR] $*"
 }
 
 # Check if needed dependencies are present

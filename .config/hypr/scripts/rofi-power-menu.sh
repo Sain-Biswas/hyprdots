@@ -25,7 +25,7 @@ set -euo pipefail
 
 # Logging Utilities
 error() {
-    notify-send -u critical -i script "Refresh theme script" "[ERROR] $*"
+    notify-send -a power-menu -u critical -i dialog-error "Rofi Power Menu" "[ERROR] $*"
 }
 
 

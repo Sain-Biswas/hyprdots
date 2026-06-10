@@ -13,18 +13,14 @@ DEBUG=false
 
 
 # Logging Utilities
-log() {
-    notify-send -u normal -i script "Refresh theme script" "[INFO] $*"
-}
-
 debug() {
     if [[ "$DEBUG" == true ]]; then
-        notify-send -u low -i script "Refresh theme script" "[DEBUG] $*"
+        notify-send -a theme-refresh -u low -i script "Refresh theme script" "[DEBUG] $*"
     fi
 }
 
 error() {
-    notify-send -u critical -i script "Refresh theme script" "[ERROR] $*"
+    notify-send -a theme-refresh -u critical -i script "Refresh theme script" "[ERROR] $*"
 }
 
 
