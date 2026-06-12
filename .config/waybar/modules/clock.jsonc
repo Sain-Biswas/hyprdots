@@ -22,10 +22,10 @@
       "weeks-pos": "left", //  The position where week numbers should be displayed. Disabled when is empty. Possible values: left|right
 
       "format": {
-        "months": "<span color='#ffba29'><b>{}</b></span>", //  Format is applied to months header(January, February,...etc.)
-        "days": "<span color='#f1e0ca'><b>{}</b></span>", //  Format is applied to days
-        "weeks": "<span color='#dbc48c'><b>W{}</b></span>", //  Format is applied to week numbers. When weekday format is not provided then is used default format: '{:%W}' when week starts with Monday, '{:%U}' otherwise
-        "weekdays": "<span color='#d7c77a'><b>{}</b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
+        "months": "<span color='#88d7aa'><b>{}</b></span>", //  Format is applied to months header(January, February,...etc.)
+        "days": "<span color='#e6e0ec'><b>{}</b></span>", //  Format is applied to days
+        "weeks": "<span color='#dfbbde'><b>W{}</b></span>", //  Format is applied to week numbers. When weekday format is not provided then is used default format: '{:%W}' when week starts with Monday, '{:%U}' otherwise
+        "weekdays": "<span color='#d1bdf6'><b>{}</b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
         "today": "<span color='#ffb4ab'><b><u>{}</u></b></span>", //  Format is applied to weeks header(Su,Mo,...etc.)
       },
     },

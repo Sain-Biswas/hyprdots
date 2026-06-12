@@ -6,59 +6,59 @@
 # Made by Sain-Biswas <https://github.com/Sain-Biswas>
 
 [colors.primary]
-background = '#1a1206'
-foreground = '#f1e0ca'
+background = '#14121a'
+foreground = '#e6e0ec'
 
 [colors.cursor]
-text = '#f1e0ca'
-cursor = '#d4c4af'
+text = '#e6e0ec'
+cursor = '#cac4d5'
 
 [colors.vi_mode_cursor]
-text = '#1a1206'
-cursor = '#ffba29'
+text = '#14121a'
+cursor = '#88d7aa'
 
 [colors.search.matches]
-foreground = '#504535'
-background = '#d7c77a'
+foreground = '#494553'
+background = '#d1bdf6'
 
 [colors.search.focused_match]
-foreground = '#504535'
-background = '#ffba29'
+foreground = '#494553'
+background = '#88d7aa'
 
 [colors.footer_bar]
-foreground = '#504535'
-background = '#f1e0ca'
+foreground = '#494553'
+background = '#e6e0ec'
 
 [colors.hints.start]
-foreground = '#504535'
-background = '#dbc48c'
+foreground = '#494553'
+background = '#dfbbde'
 
 [colors.hints.end]
-foreground = '#504535'
-background = '#dbc48c'
+foreground = '#494553'
+background = '#dfbbde'
 
 [colors.selection]
-text = '#1a1206'
-background = '#ffba29'
+text = '#14121a'
+background = '#88d7aa'
 
 
 [colors.normal]
-black = "#1a1206"
+black = "#14121a"
 red = "#ffb4ab"
-green = "#ffba29"
-yellow = "#dbc48c"
-blue = "#d7c77a"
+green = "#88d7aa"
+yellow = "#dfbbde"
+blue = "#d1bdf6"
 magenta = "#93000a"
-cyan = "#ffdea9"
-white = "#d4c4af"
+cyan = "#a3f4c5"
+white = "#cac4d5"
 
 
 [colors.bright]
-black = "#413828"
+black = "#3b3841"
 red = "#ffb4ab"
-green = "#ffba29"
-yellow = "#dbc48c"
-blue = "#d7c77a"
+green = "#88d7aa"
+yellow = "#dfbbde"
+blue = "#d1bdf6"
 magenta = "#93000a"
-cyan = "#ffdea9"
-white = "#f1e0ca"
+cyan = "#a3f4c5"
+white = "#e6e0ec"

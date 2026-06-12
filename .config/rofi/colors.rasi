@@ -8,56 +8,56 @@
 */
 
 * {
-    primary: rgba(255, 186, 41, 1);
-    primary-fixed: rgba(255, 222, 169, 1);
-    primary-fixed-dim: rgba(255, 186, 41, 1);
-    on-primary: rgba(66, 44, 0, 1);
-    on-primary-fixed: rgba(39, 25, 0, 1);
-    on-primary-fixed-variant: rgba(95, 65, 0, 1);
-    primary-container: rgba(95, 65, 0, 1);
-    on-primary-container: rgba(255, 222, 169, 1);
+    primary: rgba(136, 215, 170, 1);
+    primary-fixed: rgba(163, 244, 197, 1);
+    primary-fixed-dim: rgba(136, 215, 170, 1);
+    on-primary: rgba(0, 56, 34, 1);
+    on-primary-fixed: rgba(0, 33, 18, 1);
+    on-primary-fixed-variant: rgba(0, 82, 51, 1);
+    primary-container: rgba(0, 82, 51, 1);
+    on-primary-container: rgba(163, 244, 197, 1);
 
-    secondary: rgba(219, 196, 140, 1);
-    secondary-fixed: rgba(248, 224, 166, 1);
-    secondary-fixed-dim: rgba(219, 196, 140, 1);
-    on-secondary: rgba(60, 47, 4, 1);
-    on-secondary-fixed: rgba(36, 26, 0, 1);
-    on-secondary-fixed-variant: rgba(84, 69, 25, 1);
-    secondary-container: rgba(84, 69, 25, 1);
-    on-secondary-container: rgba(248, 224, 166, 1);
+    secondary: rgba(223, 187, 222, 1);
+    secondary-fixed: rgba(252, 215, 251, 1);
+    secondary-fixed-dim: rgba(223, 187, 222, 1);
+    on-secondary: rgba(64, 40, 67, 1);
+    on-secondary-fixed: rgba(42, 19, 45, 1);
+    on-secondary-fixed-variant: rgba(88, 62, 90, 1);
+    secondary-container: rgba(88, 62, 90, 1);
+    on-secondary-container: rgba(252, 215, 251, 1);
 
-    tertiary: rgba(215, 199, 122, 1);
-    tertiary-fixed: rgba(244, 227, 147, 1);
-    tertiary-fixed-dim: rgba(215, 199, 122, 1);
-    on-tertiary: rgba(56, 48, 0, 1);
-    on-tertiary-fixed: rgba(33, 28, 0, 1);
-    on-tertiary-fixed-variant: rgba(81, 71, 4, 1);
-    tertiary-container: rgba(81, 71, 4, 1);
-    on-tertiary-container: rgba(244, 227, 147, 1);
+    tertiary: rgba(209, 189, 246, 1);
+    tertiary-fixed: rgba(235, 221, 255, 1);
+    tertiary-fixed-dim: rgba(209, 189, 246, 1);
+    on-tertiary: rgba(55, 40, 86, 1);
+    on-tertiary-fixed: rgba(34, 18, 64, 1);
+    on-tertiary-fixed-variant: rgba(78, 62, 110, 1);
+    tertiary-container: rgba(78, 62, 110, 1);
+    on-tertiary-container: rgba(235, 221, 255, 1);
 
     error: rgba(255, 180, 171, 1);
     on-error: rgba(105, 0, 5, 1);
     error-container: rgba(147, 0, 10, 1);
     on-error-container: rgba(255, 218, 214, 1);
 
-    surface: rgba(26, 18, 6, 0.5);
-    on-surface: rgba(241, 224, 202, 1);
-    on-surface-variant: rgba(212, 196, 175, 1);
+    surface: rgba(20, 18, 26, 0.5);
+    on-surface: rgba(230, 224, 236, 1);
+    on-surface-variant: rgba(202, 196, 213, 1);
 
-    outline: rgba(156, 143, 123, 1);
-    outline-variant: rgba(80, 69, 53, 1);
+    outline: rgba(148, 142, 159, 1);
+    outline-variant: rgba(73, 69, 83, 1);
     shadow: rgba(0, 0, 0, 1);
 
     scrim: rgba(0, 0, 0, 1);
-    inverse-surface: rgba(241, 224, 202, 1);
-    inverse-on-surface: rgba(56, 47, 32, 1);
-    inverse-primary: rgba(125, 88, 0, 1);
+    inverse-surface: rgba(230, 224, 236, 1);
+    inverse-on-surface: rgba(50, 47, 56, 1);
+    inverse-primary: rgba(22, 108, 71, 1);
 
-    surface-dim: rgba(26, 18, 6, 1);
-    surface-bright: rgba(65, 56, 40, 1);
-    surface-container-lowest: rgba(20, 13, 3, 1);
-    surface-container-low: rgba(34, 26, 13, 1);
-    surface-container: rgba(39, 30, 17, 1);
-    surface-container-high: rgba(49, 41, 26, 1);
-    surface-container-highest: rgba(61, 51, 36, 1);
+    surface-dim: rgba(20, 18, 26, 1);
+    surface-bright: rgba(59, 56, 65, 1);
+    surface-container-lowest: rgba(15, 13, 21, 1);
+    surface-container-low: rgba(29, 26, 34, 1);
+    surface-container: rgba(33, 30, 38, 1);
+    surface-container-high: rgba(43, 41, 49, 1);
+    surface-container-highest: rgba(54, 51, 60, 1);
 }

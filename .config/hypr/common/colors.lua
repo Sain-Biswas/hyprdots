@@ -7,108 +7,108 @@
 
 local colors = {}
 
-colors.image = "/home/sainbiswas/hyprdots/wallpapers/mountains.jpg"
+colors.image = "/home/sainbiswas/hyprdots/wallpapers/genshin-impact-skirk.jpg"
 
 
-colors.background =  "rgba(1A1206FF)"
+colors.background =  "rgba(14121AFF)"
 
 colors.error =  "rgba(FFB4ABFF)"
 
 colors.errorContainer =  "rgba(93000AFF)"
 
-colors.inverseOnSurface =  "rgba(382F20FF)"
+colors.inverseOnSurface =  "rgba(322F38FF)"
 
-colors.inversePrimary =  "rgba(7D5800FF)"
+colors.inversePrimary =  "rgba(166C47FF)"
 
-colors.inverseSurface =  "rgba(F1E0CAFF)"
+colors.inverseSurface =  "rgba(E6E0ECFF)"
 
-colors.onBackground =  "rgba(F1E0CAFF)"
+colors.onBackground =  "rgba(E6E0ECFF)"
 
 colors.onError =  "rgba(690005FF)"
 
 colors.onErrorContainer =  "rgba(FFDAD6FF)"
 
-colors.onPrimary =  "rgba(422C00FF)"
+colors.onPrimary =  "rgba(003822FF)"
 
-colors.onPrimaryContainer =  "rgba(FFDEA9FF)"
+colors.onPrimaryContainer =  "rgba(A3F4C5FF)"
 
-colors.onPrimaryFixed =  "rgba(271900FF)"
+colors.onPrimaryFixed =  "rgba(002112FF)"
 
-colors.onPrimaryFixedVariant =  "rgba(5F4100FF)"
+colors.onPrimaryFixedVariant =  "rgba(005233FF)"
 
-colors.onSecondary =  "rgba(3C2F04FF)"
+colors.onSecondary =  "rgba(402843FF)"
 
-colors.onSecondaryContainer =  "rgba(F8E0A6FF)"
+colors.onSecondaryContainer =  "rgba(FCD7FBFF)"
 
-colors.onSecondaryFixed =  "rgba(241A00FF)"
+colors.onSecondaryFixed =  "rgba(2A132DFF)"
 
-colors.onSecondaryFixedVariant =  "rgba(544519FF)"
+colors.onSecondaryFixedVariant =  "rgba(583E5AFF)"
 
-colors.onSurface =  "rgba(F1E0CAFF)"
+colors.onSurface =  "rgba(E6E0ECFF)"
 
-colors.onSurfaceVariant =  "rgba(D4C4AFFF)"
+colors.onSurfaceVariant =  "rgba(CAC4D5FF)"
 
-colors.onTertiary =  "rgba(383000FF)"
+colors.onTertiary =  "rgba(372856FF)"
 
-colors.onTertiaryContainer =  "rgba(F4E393FF)"
+colors.onTertiaryContainer =  "rgba(EBDDFFFF)"
 
-colors.onTertiaryFixed =  "rgba(211C00FF)"
+colors.onTertiaryFixed =  "rgba(221240FF)"
 
-colors.onTertiaryFixedVariant =  "rgba(514704FF)"
+colors.onTertiaryFixedVariant =  "rgba(4E3E6EFF)"
 
-colors.outline =  "rgba(9C8F7BFF)"
+colors.outline =  "rgba(948E9FFF)"
 
-colors.outlineVariant =  "rgba(504535FF)"
+colors.outlineVariant =  "rgba(494553FF)"
 
-colors.primary =  "rgba(FFBA29FF)"
+colors.primary =  "rgba(88D7AAFF)"
 
-colors.primaryContainer =  "rgba(5F4100FF)"
+colors.primaryContainer =  "rgba(005233FF)"
 
-colors.primaryFixed =  "rgba(FFDEA9FF)"
+colors.primaryFixed =  "rgba(A3F4C5FF)"
 
-colors.primaryFixedDim =  "rgba(FFBA29FF)"
+colors.primaryFixedDim =  "rgba(88D7AAFF)"
 
 colors.scrim =  "rgba(000000FF)"
 
-colors.secondary =  "rgba(DBC48CFF)"
+colors.secondary =  "rgba(DFBBDEFF)"
 
-colors.secondaryContainer =  "rgba(544519FF)"
+colors.secondaryContainer =  "rgba(583E5AFF)"
 
-colors.secondaryFixed =  "rgba(F8E0A6FF)"
+colors.secondaryFixed =  "rgba(FCD7FBFF)"
 
-colors.secondaryFixedDim =  "rgba(DBC48CFF)"
+colors.secondaryFixedDim =  "rgba(DFBBDEFF)"
 
 colors.shadow =  "rgba(000000FF)"
 
-colors.sourceColor =  "rgba(D0B790FF)"
+colors.sourceColor =  "rgba(2D38CEFF)"
 
-colors.surface =  "rgba(1A1206FF)"
+colors.surface =  "rgba(14121AFF)"
 
-colors.surfaceBright =  "rgba(413828FF)"
+colors.surfaceBright =  "rgba(3B3841FF)"
 
-colors.surfaceContainer =  "rgba(271E11FF)"
+colors.surfaceContainer =  "rgba(211E26FF)"
 
-colors.surfaceContainerHigh =  "rgba(31291AFF)"
+colors.surfaceContainerHigh =  "rgba(2B2931FF)"
 
-colors.surfaceContainerHighest =  "rgba(3D3324FF)"
+colors.surfaceContainerHighest =  "rgba(36333CFF)"
 
-colors.surfaceContainerLow =  "rgba(221A0DFF)"
+colors.surfaceContainerLow =  "rgba(1D1A22FF)"
 
-colors.surfaceContainerLowest =  "rgba(140D03FF)"
+colors.surfaceContainerLowest =  "rgba(0F0D15FF)"
 
-colors.surfaceDim =  "rgba(1A1206FF)"
+colors.surfaceDim =  "rgba(14121AFF)"
 
-colors.surfaceTint =  "rgba(FFBA29FF)"
+colors.surfaceTint =  "rgba(88D7AAFF)"
 
-colors.surfaceVariant =  "rgba(504535FF)"
+colors.surfaceVariant =  "rgba(494553FF)"
 
-colors.tertiary =  "rgba(D7C77AFF)"
+colors.tertiary =  "rgba(D1BDF6FF)"
 
-colors.tertiaryContainer =  "rgba(514704FF)"
+colors.tertiaryContainer =  "rgba(4E3E6EFF)"
 
-colors.tertiaryFixed =  "rgba(F4E393FF)"
+colors.tertiaryFixed =  "rgba(EBDDFFFF)"
 
-colors.tertiaryFixedDim =  "rgba(D7C77AFF)"
+colors.tertiaryFixedDim =  "rgba(D1BDF6FF)"
 
 
 return colors

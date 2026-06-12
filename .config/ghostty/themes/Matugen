@@ -6,31 +6,31 @@
 # Made by Sain-Biswas <https://github.com/Sain-Biswas>
 
 
-palette = 0= #504535
+palette = 0= #494553
 palette = 1= #ffb4ab
-palette = 2= #ffba29
-palette = 3= #dbc48c
-palette = 4= #d7c77a
-palette = 5= #ffba29
-palette = 6= #dbc48c
-palette = 7= #f1e0ca
-palette = 8= #d4c4af
+palette = 2= #88d7aa
+palette = 3= #dfbbde
+palette = 4= #d1bdf6
+palette = 5= #88d7aa
+palette = 6= #dfbbde
+palette = 7= #e6e0ec
+palette = 8= #cac4d5
 palette = 9=  #ffb4ab
-palette = 10= #ffba29
-palette = 11= #dbc48c
-palette = 12= #d7c77a
-palette = 13= #ffba29
-palette = 14= #dbc48c
-palette = 15= #f1e0ca
+palette = 10= #88d7aa
+palette = 11= #dfbbde
+palette = 12= #d1bdf6
+palette = 13= #88d7aa
+palette = 14= #dfbbde
+palette = 15= #e6e0ec
 
 
-background = #1a1206
-foreground = #f1e0ca
+background = #14121a
+foreground = #e6e0ec
 
 
-cursor-color = #f1e0ca
-cursor-text = #1a1206
+cursor-color = #e6e0ec
+cursor-text = #14121a
 
 
-selection-background = #d7c77a
-selection-foreground = #383000
+selection-background = #d1bdf6
+selection-foreground = #372856
