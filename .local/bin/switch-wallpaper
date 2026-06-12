@@ -1,0 +1,289 @@
+#!/usr/bin/env sh
+
+# ░█░█░█▀█░█░░░█░░░█▀█░█▀█░█▀█░█▀▀░█▀▄░░░░░░░░░█▀█░▀█▀░█▀▀░█░█░█▀▀░█▀▄
+# ░█▄█░█▀█░█░░░█░░░█▀▀░█▀█░█▀▀░█▀▀░█▀▄░░░▄▄▄░░░█▀▀░░█░░█░░░█▀▄░█▀▀░█▀▄
+# ░▀░▀░▀░▀░▀▀▀░▀▀▀░▀░░░▀░▀░▀░░░▀▀▀░▀░▀░░░░░░░░░▀░░░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀
+
+: '
+wallpaper-picker.sh
+
+Interactive wallpaper picker using:
+  - fzf
+  - chafa
+  - ImageMagick
+  - matugen
+
+Features:
+  - Sort wallpapers by modification time
+  - Cached thumbnails
+  - Kitty graphics preview
+  - Wallpaper selection via fzf
+  - Matugen integration
+
+Usage:
+  wallpaper-picker.sh [wallpaper_directory]
+'
+
+
+
+: '
+Enable strict bash behavior:
+    -e          : exit immediately if a command fails
+    -u          : treat unset variables as errors
+    -o pipefail : fail pipelines when any command fails
+'
+set -euo pipefail
+
+
+
+# Script configuration
+readonly WALLPAPER_DIR="${1:-$HOME/hyprdots/wallpapers}"
+readonly CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/wallpapers"
+
+
+
+: '
+Supported image extensions
+
+currently used as documentation/reference for supported formats
+'
+readonly IMAGE_EXTENSIONS=(
+    jpg
+    jpeg
+    png
+    webp
+    gif
+    bmp
+    avif
+)
+
+
+
+# Logging Utilities
+
+: '
+Display a success notification after wallpaper application
+
+Arguments:
+    $* - Message to display
+'
+success() {
+    notify-send -a wallpaper-picker -i image-x-generic "󰸉 Wallpaper Applied" "$*"
+}
+
+
+
+: '
+Display an error notification
+
+Arguments:
+    $* - Error message to display
+'
+error() {
+    notify-send -a wallpaper-picker -u critical -i image-x-generic "Wallpaper Picker" "[ERROR] $*"
+}
+
+
+
+: '
+Verify that all required external dependencies are installed
+
+Exits with status 2 if any dependency is missing
+'
+check_dependencies() {
+    local deps=(
+        find
+        fzf
+        chafa
+        magick
+        matugen
+        notify-send
+        sha256sum
+        sort
+        cut
+    )
+
+    for cmd in "${deps[@]}"; do
+        if ! command -v "$cmd" >/dev/null 2>&1; then
+            error "Required dependency '$cmd' is not installed."
+            exit 2
+        fi
+    done
+}
+
+
+
+: '
+Clear any previously rendered kitty graphics protocol image
+
+This prevents preview artifacts from remaining fater exit
+'
+cleanup() {
+    printf '\e_Ga=d,d=A\e\\' 2>/dev/null || true
+}
+
+
+
+: '
+Generate the cache path for a wallpaper thumnail
+
+Arguments:
+    $1 - Original image path
+
+Output:
+    Absolute path to cached thubnail file
+'
+thumbnail_path() {
+    local file="$1"
+
+    printf '%s/%s.webp\n' "$CACHE_DIR" "$(printf '%s' "$file" | sha256sum | cut -d' ' -f1)"
+}
+
+
+
+: '
+Generate a thubnail if it does not exist or if the source image has been modified since the thubnail was created
+
+Arguments:
+    $1 - Original image path
+
+Output: Path to generated thubnail
+'
+generate_thumbnail() {
+    local file="$1"
+    local thumb
+
+    thumb="$(thumbnail_path "$file")"
+
+    if [[ ! -f "$thumb" || "$file" -nt "$thumb" ]]; then
+        magick "$file" -auto-orient -thumbnail '512x512>' -quality 85 "$thumb"
+    fi
+
+    printf '%s\n' "$thumb"
+}
+
+
+
+: '
+Discover wallpapers and sort them by modification time (newest first)
+
+Output:
+    TIMESTAMP<TAB>FILEPATH
+'
+get_wallpapers() {
+    while IFS= read -r -d '' file; do
+        printf '%s\t%s\n' \
+            "$(stat -c '%Y' "$file")" \
+            "$file"
+    done < <(
+        find "$WALLPAPER_DIR" \
+            -type f \
+            \( \
+                -iname '*.jpg'  -o \
+                -iname '*.jpeg' -o \
+                -iname '*.png'  -o \
+                -iname '*.webp' -o \
+                -iname '*.gif'  -o \
+                -iname '*.bmp'  -o \
+                -iname '*.avif' \
+            \) \
+            -print0
+    ) | sort -rn
+}
+
+
+
+: '
+Present wallpapers in an fzfinterface with image previews
+
+Featues:
+    - Sorted by modification date
+    - Thubnail caching
+    - Kitty graphics preview via chafa
+    - Displays only filenames in the selection list
+
+Output:
+    Full path of selected wallpaper
+'
+select_wallpaper() {
+    export CACHE_DIR
+
+    get_wallpapers |
+        cut -f2 |
+        while IFS= read -r file; do
+            printf '%s\t%s\n' \
+                "$(basename "$file")" \
+                "$file"
+        done |
+        fzf \
+            --height=100% \
+            --layout=reverse \
+            --border \
+            --cycle \
+            --delimiter=$'\t' \
+            --with-nth=1 \
+            --prompt='󰸉 Wallpaper > ' \
+            --preview-window='right:70%,border-left' \
+            --preview '
+                img={2}
+
+                thumb="$CACHE_DIR/$(printf "%s" "$img" | sha256sum | cut -d" " -f1).webp"
+
+                if [[ ! -f "$thumb" || "$img" -nt "$thumb" ]]; then
+                    mkdir -p "$CACHE_DIR"
+
+                    magick "$img" \
+                        -auto-orient \
+                        -thumbnail "512x512>" \
+                        -quality 85 \
+                        "$thumb"
+                fi
+
+                printf "\e_Ga=d,d=A\e\\"
+
+                chafa \
+                    --format=kitty \
+                    --animate=off \
+                    --size="${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}" \
+                    "$thumb"
+            ' |
+        cut -f2
+}
+
+
+
+: '
+Main application entry point
+'
+main() {
+
+    # Verify dependencies
+    check_dependencies
+
+    # Validate wallpaper directory
+    [[ -d "$WALLPAPER_DIR" ]] || {
+        error "Directory not found: $WALLPAPER_DIR"
+        exit 1
+    }
+
+    # Create cache directory
+    mkdir -p "$CACHE_DIR"
+
+    # Register cleanup directory
+    trap cleanup EXIT INT TERM
+
+    # Launch wallpaper picker
+    local selected
+
+    selected="$(select_wallpaper)"
+
+    [[ -n "$selected" ]] || exit 0
+
+    # Apply selected wallpaper using matugen
+    matugen image --type scheme-expressive --verbose --show-colors "$selected"
+
+    # Notify success
+    success "$(basename "$selected")"
+}
+
+main "$@"
