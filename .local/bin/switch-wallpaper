@@ -280,7 +280,7 @@ main() {
     [[ -n "$selected" ]] || exit 0
 
     # Apply selected wallpaper using matugen
-    matugen image --type scheme-expressive --verbose --show-colors "$selected"
+    matugen image --type scheme-expressive --verbose --show-colors --base16-backend wal "$selected"
 
     # Notify success
     success "$(basename "$selected")"
