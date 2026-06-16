@@ -35,3 +35,5 @@ cursor-text = {{colors.surface.default.hex}}
 
 selection-background = {{colors.tertiary.default.hex}}
 selection-foreground = {{colors.on_tertiary.default.hex}}
+
+split-divider-color = {{colors.outline_variant.default.hex}}

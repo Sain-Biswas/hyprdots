@@ -7,7 +7,9 @@
 
 [colors.primary]
 background = '#14121a'
-foreground = '#e6e0ec'
+foreground = '#cac4d5'
+dim_foreground = "#948e9f"
+bright_foreground = "#e6e0ec"
 
 [colors.cursor]
 text = '#e6e0ec'
