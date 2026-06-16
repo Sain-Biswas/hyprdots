@@ -6,40 +6,81 @@
 # Made by Sain-Biswas <https://github.com/Sain-Biswas>
 
 
+# main background, empty for terminal default, need to be empty if you want transparent background
 theme[main_bg]="#14121a"
+
+# main text color
 theme[main_fg]="#e6e0ec"
-theme[title]="#88d7aa"
-theme[hi_fg]="#d1bdf6"
+
+# title color for boxes
+theme[title]="#ebddff"
+
+# highlight color for keyboard shortcuts
+theme[hi_fg]="#88d7aa"
+
+# color for selected item in processes box
 theme[selected_bg]="#36333c"
 theme[selected_fg]="#e6e0ec"
+
+# color of inactive/disabled text
 theme[inactive_fg]="#cac4d5"
+
+# misc colors for processes box including mini cpu graphs, details memory graph and details status text
 theme[proc_misc]="#dfbbde"
+
+# color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#ffb4ab"
+
+# cpu, memory, network, proc box outline colors
 theme[cpu_box]="#948e9f"
 theme[mem_box]="#948e9f"
 theme[net_box]="#948e9f"
 theme[proc_box]="#948e9f"
+
+# box divider line and small boxes line color
 theme[div_line]="#494553"
+
+# temperature graph color
 theme[temp_start]="#88d7aa"
 theme[temp_mid]="#dfbbde"
 theme[temp_end]="#d1bdf6"
+
+# cpu graph colors
 theme[cpu_start]="#88d7aa"
 theme[cpu_mid]="#dfbbde"
 theme[cpu_end]="#d1bdf6"
+
+# mem/disk free meter
 theme[free_start]="#88d7aa"
 theme[free_mid]="#dfbbde"
 theme[free_end]="#d1bdf6"
+
+# mem/disk cached meter
 theme[cached_start]="#88d7aa"
 theme[cached_mid]="#dfbbde"
 theme[cached_end]="#d1bdf6"
+
+# mem/disk available meter
 theme[available_start]="#88d7aa"
 theme[available_mid]="#dfbbde"
 theme[available_end]="#d1bdf6"
+
+# mem/disk used meter
 theme[used_start]="#88d7aa"
 theme[used_mid]="#dfbbde"
 theme[used_end]="#d1bdf6"
+
+# download graph colors
 theme[download_start]="#88d7aa"
 theme[download_mid]="#dfbbde"
 theme[download_end]="#d1bdf6"
+
+# upload graph colors 
 theme[upload_start]="#88d7aa"
 theme[upload_mid]="#dfbbde"
 theme[upload_end]="#d1bdf6"
+
+# process box color gradient for threads, mem and cpu usage
+theme[process_start]="#88d7aa"
+theme[process_mid]="#dfbbde"
+theme[process_end]="#d1bdf6"
