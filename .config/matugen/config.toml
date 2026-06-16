@@ -7,7 +7,7 @@ command = "awww img {{image}} --transition-type outer"
 
 
 
-# GTK Applicatoin Theming
+# GTK Application Theming
 [templates.gtk3]
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-gtk3.css"
 output_path = "~/hyprdots/.config/gtk-3.0/gtk.css"
@@ -75,3 +75,9 @@ post_hook = "pkill -SIGUSR2 waybar"
 input_path = "~/hyprdots/.config/matugen/configuration/matugen-colors.css"
 output_path = "~/hyprdots/.config/swaync/colors.css"
 post_hook = "swaync-client -R -rs"
+
+
+# ZSH
+[templates.zsh]
+input_path = "~/hyprdots/.config/matugen/configuration/matugen-shell.zsh"
+output_path = "~/hyprdots/matugen.zsh"

@@ -116,7 +116,7 @@ check_dependencies() {
 : '
 Clear any previously rendered kitty graphics protocol image
 
-This prevents preview artifacts from remaining fater exit
+This prevents preview artifacts from remaining faster exit
 '
 cleanup() {
     printf '\e_Ga=d,d=A\e\\' 2>/dev/null || true
@@ -125,13 +125,13 @@ cleanup() {
 
 
 : '
-Generate the cache path for a wallpaper thumnail
+Generate the cache path for a wallpaper thumbnail
 
 Arguments:
     $1 - Original image path
 
 Output:
-    Absolute path to cached thubnail file
+    Absolute path to cached thumbnail file
 '
 thumbnail_path() {
     local file="$1"
@@ -142,12 +142,12 @@ thumbnail_path() {
 
 
 : '
-Generate a thubnail if it does not exist or if the source image has been modified since the thubnail was created
+Generate a thumbnail if it does not exist or if the source image has been modified since the thumbnail was created
 
 Arguments:
     $1 - Original image path
 
-Output: Path to generated thubnail
+Output: Path to generated thumbnail
 '
 generate_thumbnail() {
     local file="$1"
@@ -194,11 +194,11 @@ get_wallpapers() {
 
 
 : '
-Present wallpapers in an fzfinterface with image previews
+Present wallpapers in an fzf-interface with image previews
 
-Featues:
+Features:
     - Sorted by modification date
-    - Thubnail caching
+    - Thumbnail caching
     - Kitty graphics preview via chafa
     - Displays only filenames in the selection list
 

@@ -2,7 +2,7 @@
 # ░▄▀░░▀▀█░█▀█░░░▄▄▄░░░▄▀░░▀▀█░█▀█░█▀▄░█░░
 # ░▀▀▀░▀▀▀░▀░▀░░░░░░░░░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀
 
-# set zinit home for the plugins to navigave
+# set zinit home for the plugins to navigate
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # check if zinit is installed and install if not
@@ -59,18 +59,25 @@ setopt correct
 
 
 
+# load fzf and zoxide
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+
+
+# source matugen colors
+source "${HOME}/hyprdots/matugen.zsh"
+
+
+
 # zsh styling for various functions
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -a --color=always $realpath'
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
-
-
-# load fzf and zoxide
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 
 
 # aliases
