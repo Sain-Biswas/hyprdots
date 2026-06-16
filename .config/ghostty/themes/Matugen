@@ -6,21 +6,22 @@
 # Made by Sain-Biswas <https://github.com/Sain-Biswas>
 
 
-palette = 0= #494553
+palette = 0= #14121a
 palette = 1= #ffb4ab
 palette = 2= #88d7aa
 palette = 3= #dfbbde
 palette = 4= #d1bdf6
-palette = 5= #88d7aa
-palette = 6= #dfbbde
-palette = 7= #e6e0ec
-palette = 8= #cac4d5
+palette = 5= #a3f4c5
+palette = 6= #fcd7fb
+palette = 7= #cac4d5
+
+palette = 8= #3b3841
 palette = 9=  #ffb4ab
 palette = 10= #88d7aa
 palette = 11= #dfbbde
 palette = 12= #d1bdf6
-palette = 13= #88d7aa
-palette = 14= #dfbbde
+palette = 13= #a3f4c5
+palette = 14= #fcd7fb
 palette = 15= #e6e0ec
 
 
