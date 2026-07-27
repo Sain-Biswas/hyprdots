@@ -105,3 +105,21 @@ alias gl="git log --oneline"
 alias gll="git log"
 alias gtree="git log --oneline --graph --all"
 alias gtrash="git stash --include-untracked"
+
+
+
+# pnpm
+export PNPM_HOME="/home/sainbiswas/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/sainbiswas/.bun/_bun" ] && source "/home/sainbiswas/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun end
