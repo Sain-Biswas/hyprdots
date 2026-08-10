@@ -38,7 +38,7 @@ SCREENSHOT_MODE=$(
 # Exit if the menu was cancelled.
 [ -z "$SCREENSHOT_MODE" ] && exit 0
 
-
+sleep .1
 
 # Launch the screenshot utility with the selected mode.
 case "$SCREENSHOT_MODE" in
