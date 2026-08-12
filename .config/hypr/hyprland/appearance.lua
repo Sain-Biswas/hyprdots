@@ -17,10 +17,10 @@ hl.config({
         --  gaps between windows
         gaps_in = 5,
         --  gaps between windows and monitor edges
-        gaps_out = 5,
+        gaps_out = 8,
 
         --  size of the border around windows
-        border_size = 4,
+        border_size = 1,
 
         col = {
             --  border color for the active window
@@ -39,7 +39,7 @@ hl.config({
         --  rounded corners’ radius (in layout px)
         rounding = 10,
         --  adjusts the curve used for rounding corners, larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0]
-        rounding_power = 2,
+        rounding_power = 15,
 
         --  opacity of active windows. [0.0 - 1.0]
         active_opacity = 1.0,
@@ -65,9 +65,9 @@ hl.config({
             --  enable kawase window background blur
             enabled = true,
             --  blur size (distance)
-            size = 5,
+            size = 2,
             --  the amount of passes to perform
-            passes = 3,
+            passes = 5,
 
             --  Increase saturation of blurred colors. [0.0 - 1.0]
             vibrancy = 0.1696
