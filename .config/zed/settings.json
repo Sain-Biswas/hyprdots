@@ -9,6 +9,10 @@
 {
   "disable_ai": true,
 
+  "title_bar": {
+    "show_branch_status_icon": true
+  },
+
   "tabs": {
     "file_icons": true,
     "git_status": true,
@@ -26,8 +30,9 @@
 
   "ui_font_size": 16,
   "ui_font_family": "Maple Mono NF",
+  "ui_font_weight": 800.0,
 
-  "buffer_font_size": 16,
+  "buffer_font_size": 18.0,
   "buffer_font_family": "Maple Mono NF",
 
   "autosave": "on_focus_change",
