@@ -7,10 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
   "disable_ai": true,
 
+  "auto_update": false,
+  "completion_menu_item_kind": "symbol",
+  "show_signature_help_after_edits": true,
+
   "title_bar": {
-    "show_branch_status_icon": true
+    "show_branch_status_icon": true,
   },
 
   "tabs": {
@@ -30,13 +35,16 @@
 
   "ui_font_size": 16,
   "ui_font_family": "Maple Mono NF",
-  "ui_font_weight": 800.0,
 
   "buffer_font_size": 18.0,
   "buffer_font_family": "Maple Mono NF",
 
+  "markdown_preview_code_font_family": "Maple Mono NF",
+  "markdown_preview_font_family": "JetBrainsMono Nerd Font Propo",
+
   "autosave": "on_focus_change",
   "show_whitespaces": "all",
+  "format_on_save": "on",
 
   "theme": {
     "mode": "dark",
