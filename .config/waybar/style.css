@@ -10,12 +10,12 @@
     all: unset;
 
     font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
 }
 
 window#waybar {
     border-radius: 0px;
 
-    background: @surface;
     color: @on_surface;
 }
 
@@ -25,6 +25,7 @@ tooltip {
 }
 
 tooltip label {
+    font-size: 16px;
     color: @on_surface;
 }
 
@@ -40,3 +41,11 @@ tooltip label {
 @import "styling/idle-inhibitor.css";
 @import "styling/network.css";
 @import "styling/privacy.css";
+
+#utility {
+    padding: 6px;
+    border-radius: 9999px;
+    margin-right: 4px;
+
+    background: @surface_variant;
+}

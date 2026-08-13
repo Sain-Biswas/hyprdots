@@ -8,6 +8,9 @@
   "position": "top",
   "height": 0,
   "spacing": 0,
+  "margin-top": 4,
+  "margin-left": 4,
+  "margin-right": 4,
 
   "include": [
     "~/hyprdots/.config/waybar/modules/clock.jsonc",
@@ -24,16 +27,26 @@
     "~/hyprdots/.config/waybar/modules/privacy.jsonc",
   ],
 
-  "modules-left": ["hyprland/workspaces", "mpris"],
-  "modules-center": ["power-profiles-daemon", "clock", "custom/swaync"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["mpris"],
   "modules-right": [
     "privacy",
-    "idle_inhibitor",
     "pulseaudio",
-    "network",
-    "backlight",
+    "group/utility",
+    "custom/swaync",
     "tray",
-    // "battery",
-    "upower",
+    // "upower",
+    "battery",
+    "clock",
   ],
+
+  "group/utility": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "idle_inhibitor",
+      "power-profiles-daemon",
+      "backlight",
+    ],
+  },
 }

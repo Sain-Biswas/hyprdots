@@ -5,21 +5,18 @@
 */
 
 #idle_inhibitor {
-    margin: 2px;
-    padding: 0px 8px;
-
-    font-size: 12px;
-    font-weight: 900;
-
-    border-radius: 10px;
+    padding: 0px 6px;
+    border-radius: 9999px;
+    margin-right: 4px;
 }
 
 #idle_inhibitor.activated {
+    padding: 0px 12px;
+
     background: @error;
     color: @on_error;
 }
 
 #idle_inhibitor.deactivated {
-    background: @surface;
     color: @on_surface;
 }

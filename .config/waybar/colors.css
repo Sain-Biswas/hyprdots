@@ -7,8 +7,10 @@
 * Made by Sain-Biswas <https://github.com/Sain-Biswas>
 */
 
-@define-color surface_blur rgba(20, 18, 26, 0.75);
 @define-color surface rgba(20, 18, 26, 1);
+@define-color surface_container rgba(33, 30, 38, 1);
+@define-color surface_variant rgba(73, 69, 83, 1);
+
 @define-color on_surface rgba(230, 224, 236, 1);
 
 @define-color primary rgba(136, 215, 170, 1);

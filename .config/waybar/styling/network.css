@@ -5,10 +5,10 @@
 */
 
 #network {
-    margin: 2px;
-    border-radius: 10px;
-    padding: 0px 8px;
-    background: @surface;
+    padding: 0px 12px;
+    border-radius: 9999px;
+    margin-right: 4px;
+
     color: @on_surface;
 }
 

@@ -5,12 +5,9 @@
 */
 
 #privacy-item {
-    margin: 2px;
-    padding: 0px 8px;
-    border-radius: 10px;
-
-    font-size: 12px;
-    font-weight: 900;
+    padding: 0px 12px;
+    border-radius: 9999px;
+    margin-right: 4px;
 }
 
 #privacy-item.screenshare,

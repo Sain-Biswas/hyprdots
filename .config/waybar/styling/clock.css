@@ -5,13 +5,9 @@
 */
 
 #clock {
-    margin: 2px;
-    padding: 0px 8px;
-    border-radius: 10px;
+    padding: 4px 12px;
+    border-radius: 9999px;
 
-    font-size: 12px;
-    font-weight: 900;
-
-    background-color: @surface;
+    background: @surface_container;
     color: @on_surface;
 }

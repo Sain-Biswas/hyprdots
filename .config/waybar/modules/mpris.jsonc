@@ -8,8 +8,8 @@
 
 {
   "mpris": {
-    "format": "{player_icon} {title}", //  The text format.
-    "format-paused": "{status_icon} <i>{title}</i>", //  The text format to be shown when audio is paused.
+    "format": "{player_icon} <span weight='900'>{title}</span> - {artist}", //  The text format.
+    "format-paused": "{status_icon} <span weight='900'><i>{title}</i></span> - {artist}", //  The text format to be shown when audio is paused.
 
     "tooltip-format": "Source -> {player_icon}  {player}\nTitle -> {title}\nArtist -> {artist}\nAlbum -> {album}\nLength -> {position}/{length}\nStatus -> {status_icon}  {status}", //  Format of the default tooltip.
 

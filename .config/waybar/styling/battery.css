@@ -5,20 +5,17 @@
 */
 
 #battery {
-    margin: 2px;
-    padding: 0px 8px;
-    border-radius: 10px;
-
-    font-size: 12px;
-    font-weight: 900;
+    padding: 0px 12px;
+    border-radius: 9999px;
+    margin-right: 4px;
 
     background: @surface;
     color: @on_surface;
 }
 
 #battery.full {
-    background: @on_tertiary;
-    color: @tertiary;
+    background: @tertiary;
+    color: @on_tertiary;
 }
 
 #battery.charging,
@@ -66,12 +63,7 @@
 }
 
 #upower {
-    margin: 2px;
-    padding: 0px 8px;
-    border-radius: 10px;
-
-    font-size: 12px;
-    font-weight: 900;
+    padding: 0px 12px;
 
     background: @surface;
     color: @on_surface;

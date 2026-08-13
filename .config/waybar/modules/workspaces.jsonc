@@ -9,7 +9,7 @@
 
 {
   "hyprland/workspaces": {
-    "format": "{icon}", //  The format, how information should be displayed.
+    "format": "", //  The format, how information should be displayed.
 
     //  Based on the workspace name and state, the corresponding icon gets selected.
     "format-icons": {

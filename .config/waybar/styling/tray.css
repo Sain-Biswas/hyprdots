@@ -5,19 +5,15 @@
 */
 
 #tray {
-    margin: 2px;
-    padding: 0px 8px;
-    border-radius: 10px;
+    padding: 0px 12px;
+    border-radius: 9999px;
+    margin-right: 4px;
 
-    font-size: 12px;
-    font-weight: 900;
-
-    background: @surface;
+    background: @surface_variant;
 }
 
 #tray menu {
-    padding: 8px;
-    border-radius: 10px;
+    padding: 12px;
 
     background: @surface;
     color: @on_surface;

@@ -5,24 +5,14 @@
 */
 
 #mpris {
-    padding: 0px 8px;
-    border-radius: 10px;
-    margin: 2px;
-
-    font-size: 12px;
-    font-weight: 900;
-
-    background: @surface;
-    color: @on_surface;
+    padding: 0px 12px;
 }
 
 #mpris.playing {
-    background: @primary;
-    color: @on_primary;
+    color: @primary;
 }
 
 #mpris.paused,
 #mpris.stopped {
-    background: @error;
-    color: @on_error;
+    color: @error;
 }

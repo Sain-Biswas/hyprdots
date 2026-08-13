@@ -8,13 +8,13 @@
 
 {
   "pulseaudio": {
-    "format": "{icon} {volume}% {format_source}", //  The format, how information should be displayed. This format is used when other formats aren't specified.
+    "format": "{icon}{volume}% {format_source}", //  The format, how information should be displayed. This format is used when other formats aren't specified.
     "format-muted": " {format_source}", //  	This format is used when the sound is muted.
 
-    "format-bluetooth": "󰂯 {volume}%  {format_source}", //  This format is used when using bluetooth speakers.
+    "format-bluetooth": " {volume}% {format_source}", //  This format is used when using bluetooth speakers.
     "format-bluetooth-muted": "󰟎  {format_source}", //  This format is used when the bluetooth speaker is muted.
 
-    "format-source": " {volume}%", //  	This format used for the source.
+    "format-source": "{volume}%", //  	This format used for the source.
     "format-source-muted": "", //  This format is used when the source is muted.
 
     "on-click": "pavucontrol", //  Command to execute when clicked on the module.

@@ -11,8 +11,7 @@
   "clock": {
     "interval": 30, //  The interval in which the information gets polled.
 
-    "format": " {:%I:%M %p}", //  The format, how the date and time should be displayed; see format options here. Split braces like {0:%H}text{0:%M}.
-    "format-alt": " {:%A, %B %Od %Y}", //Toggle to this alternative format on click, if specified.
+    "format": "<span color='{{ colors.primary.default.hex }}' weight='700'>{0:%a, %b %Od}</span> * <span weight='900'>{0:%I:%M %p}</span>", //  The format, how the date and time should be displayed; see format options here. Split braces like {0:%H}text{0:%M}.
 
     "tooltip-format": "<tt><small>{calendar}</small></tt>", //  Tooltip on hover. Can also show a list of clocks in other timezones. See below the example using the property tz_list.
 
