@@ -10,8 +10,8 @@ local scripts = "~/hyprdots/.config/hypr/scripts/" --  Scripts directory
 
 
 --  Application Launching KeyBindings
-hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("uwsm app -- alacritty"))             --  Open the primary terminal
-hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("uwsm app -- ghostty"))       --  Open the secondary terminal
+hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("uwsm app -- ghostty"))               --  Open the primary terminal
+hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.exec_cmd("uwsm app -- alacritty"))     --  Open the secondary terminal
 
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("uwsm app -- nautilus"))                   --  Open Gnome File Explorer
 
@@ -42,6 +42,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))                        
 
 --  Misc.
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(scripts .. "refresh-theme.sh")) --  Refresh currently applied color scheme
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("sleep 0.1 && swaync-client -t -sw"))
 
 
 -- Move focus with mainMod + arrow keys

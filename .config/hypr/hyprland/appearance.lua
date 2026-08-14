@@ -39,7 +39,7 @@ hl.config({
         --  rounded corners’ radius (in layout px)
         rounding = 10,
         --  adjusts the curve used for rounding corners, larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0]
-        rounding_power = 15,
+        rounding_power = 7,
 
         --  opacity of active windows. [0.0 - 1.0]
         active_opacity = 1.0,
@@ -52,11 +52,11 @@ hl.config({
             --  enable drop shadows on windows
             enabled = true,
             --  Shadow range (“size”) in layout px
-            range = 4,
+            range = 20,
             --  in what power to render the falloff (more power, the faster the falloff) [1 - 4]
             render_power = 3,
             --  shadow’s color. Alpha dictates shadow’s opacity.
-            color = colors.sourceColor
+            color = colors.shadow
         },
 
         --  See, https://wiki.hypr.land/Configuring/Basics/Variables/#blur

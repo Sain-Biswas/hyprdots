@@ -34,6 +34,6 @@
 
     "format-alt": " {bandwidthUpBits}  {bandwidthDownBits}", //  On click, toggle to alternative format
 
-    "on-click-right": "alacritty -e nmtui", //  Command to execute when you right clicked on the module.
+    "on-click-right": "alacritty -T waybar-nmtui -e nmtui", //  Command to execute when you right clicked on the module.
   },
 }

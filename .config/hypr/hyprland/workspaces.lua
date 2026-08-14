@@ -69,6 +69,51 @@ hl.window_rule({
 })
 
 
+
+
+
+--  Floating Windows
+hl.window_rule({
+    name = "gnome-calculator-floating",
+    match = {
+        initial_class = "org.gnome.Calculator",
+    },
+    size = { 400, 600 },
+    float = true,
+    animation = "slide top"
+})
+hl.window_rule({
+    name = "blueman-manager-floating",
+    match = {
+        initial_class = "blueman-manager"
+    },
+    size = { 600, 500 },
+    float = true,
+    animation = "slide top"
+})
+hl.window_rule({
+    name = "waybar-nmtui-floating",
+    match = {
+        initial_title = "waybar-nmtui"
+    },
+    size = { 900, 700 },
+    float = true,
+    animation = "slide top"
+})
+hl.window_rule({
+    name = "pavucontrol-floating",
+    match = {
+        initial_class = "org.pulseaudio.pavucontrol"
+    },
+    size = { 600, 500 },
+    float = true,
+    animation = "slide top"
+})
+
+
+
+
+
 --  Custom Window rulez
 hl.layer_rule({
     name = "rofi-popup",
