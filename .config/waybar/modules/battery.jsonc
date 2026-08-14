@@ -17,12 +17,12 @@
       "critical": 15, //  Add state 'critical' at 15% battery.
     },
 
-    "format": "{icon} {capacity}%", //  The format, how the information should be displayed. When the device is discharing.
-    "format-full": "󱟢 {capacity}%", //  The format, how the information should be displayed. When the battery is full.
-    "format-plugged": "󰚥 {capacity}%", //  The format, how the information should be displayed. When the device is plugged to power.
-    "format-charging": "{icon} {capacity}%", //  The format, how the information should be displayed. When the device is charing.
+    "format": "{icon}{capacity}%", //  The format, how the information should be displayed. When the device is discharing.
+    "format-full": "󱟢{capacity}%", //  The format, how the information should be displayed. When the battery is full.
+    "format-plugged": "󰚥{capacity}%", //  The format, how the information should be displayed. When the device is plugged to power.
+    "format-charging": "{icon}{capacity}%", //  The format, how the information should be displayed. When the device is charing.
 
-    "tooltip-format": "Capacity     : {capacity}\nHealth       : {health}%\nCycles       : {cycles}", //  The tooltip format. Showed on hover over module.
+    "tooltip-format": "Capacity : {capacity}\nHealth   : {health}%\nCycles   : {cycles}", //  The tooltip format. Showed on hover over module.
 
     //  Based on the current capacity, the corresponding icon gets selected. The order is low to high. Or by the state if it is an object.
     "format-icons": {

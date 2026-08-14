@@ -12,7 +12,7 @@
     "tooltip": true, //  Option to enable tooltip on hover.
     "tooltip-format": "Left Click -> Launch Notification Center\nRight Click -> Do not Disturb", //  The format of the tooltip.
 
-    "format": "{icon} {text}", //  The format, how information should be displayed. On {} data gets inserted.
+    "format": "{icon}{text}", //  The format, how information should be displayed. On {} data gets inserted.
 
     //  If the type is an array, then based on the set percentage, the corresponding icon gets selected (low to high). If the type is an object, then the icon will be selected according to alt string from the output. If the type is a string, it will be pasted as is. NOTE: Arrays can be nested into objects. Icons will be selected first according to alt then percentage.
     "format-icons": {
