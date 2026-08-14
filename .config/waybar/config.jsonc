@@ -25,6 +25,7 @@
     "~/hyprdots/.config/waybar/modules/idle-inhibitor.jsonc",
     "~/hyprdots/.config/waybar/modules/network.jsonc",
     "~/hyprdots/.config/waybar/modules/privacy.jsonc",
+    "~/hyprdots/.config/waybar/modules/bluetooth.jsonc",
   ],
 
   "modules-left": ["hyprland/workspaces"],
@@ -44,6 +45,7 @@
     "orientation": "horizontal",
     "modules": [
       "network",
+      "bluetooth",
       "idle_inhibitor",
       "power-profiles-daemon",
       "backlight",

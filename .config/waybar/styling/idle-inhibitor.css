@@ -11,8 +11,6 @@
 }
 
 #idle_inhibitor.activated {
-    padding: 0px 12px;
-
     background: @error;
     color: @on_error;
 }

@@ -20,3 +20,12 @@ OR, if you have cloned the repository without submodules run this to pull submod
 ```bash
 git submodule update --init --recursive
 ```
+
+---
+
+## Remove Bluetooth tray icon
+
+1. Open Blueman Manager
+2. Go to View -> Plugins
+3. Find the StatusNotifierItem or TrayIcon plugin.
+4. Uncheck/ disable it.

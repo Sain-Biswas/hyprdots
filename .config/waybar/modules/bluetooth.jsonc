@@ -1,0 +1,24 @@
+/**
+* ░█░█░█▀█░█░█░█▀▄░█▀█░█▀▄░░░░░░░░░█▀▄░█░░░█░█░█▀▀░▀█▀░█▀█░█▀█░▀█▀░█░█
+* ░█▄█░█▀█░░█░░█▀▄░█▀█░█▀▄░░░▄▄▄░░░█▀▄░█░░░█░█░█▀▀░░█░░█░█░█░█░░█░░█▀█
+* ░▀░▀░▀░▀░░▀░░▀▀░░▀░▀░▀░▀░░░░░░░░░▀▀░░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀▀▀░░▀░░▀░▀
+
+* Refer to, https://github.com/Alexays/Waybar/wiki/Module:-Bluetooth
+*/
+
+{
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱 {device_battery_percentage}%",
+
+    "tooltip-format": "Controller : {controller_alias}\t{controller_address}\t{controller_address_type} \nCurrent connections : {num_connections} \nStatus : {status}",
+    "tooltip-format-connected": "Controller : {controller_alias}\t{controller_address}\t{controller_address_type} \nCurrent connections : {num_connections} \nStatus : {status} \n{device_enumerate}",
+
+    "tooltip-format-enumerate-connected": "Device : {device_alias}\t{device_address}\t{device_address_type}",
+    "tooltip-format-enumerate-connected-battery": "Device : {device_alias}\t{device_address}\t{device_address_type}\t{device_battery_percentage}%",
+
+    "on-click": "blueman-manager",
+  },
+}

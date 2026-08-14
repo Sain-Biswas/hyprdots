@@ -7,13 +7,12 @@
 #power-profiles-daemon {
     padding: 0px 6px;
     border-radius: 9999px;
+    margin-right: 4px;
 
     color: @tertiary;
 }
 
 #power-profiles-daemon.performance {
-    padding: 0px 12px;
-
     background: @error;
     color: @on_error;
 }
@@ -23,8 +22,6 @@
 }
 
 #power-profiles-daemon.power-saver {
-    padding: 0px 12px;
-
     background: @primary;
     color: @on_primary;
 }
